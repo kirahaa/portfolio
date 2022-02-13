@@ -1,0 +1,349 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+input[type="text"] {
+  text-indent: 10px;
+  border: 1px solid #ccc;
+}
+
+.faq_wrapper {
+  width: 100%;
+  height: 40px;
+  background-color: #f2f2f2;
+  margin-bottom: 60px;
+}
+
+.faq_wrapper > label {
+  display: block;
+  width: 1200px;
+  height: 40px;
+  line-height: 40px;
+  margin: 0 auto;
+}
+
+.faq_wrapper > label > span {
+  font-size: 110%;
+}
+
+.faq_search {
+  width: 1200px;
+  height: 50px;
+  line-height: 50px;
+  margin: 0 auto;
+}
+
+.faq_search > input[type=text] {
+  width: 300px;
+  height: 35px;
+  font-size: 100%;
+}
+
+.faq_search > button {
+  width: 80px;
+  height: 35px;
+  background-color: #a6a6a6;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  margin-right: 5px;
+  font-size: 100%;
+}
+
+.category_box {
+  width: 1200px;
+  height: 50px;
+  line-height: 50px;
+  margin: 0 auto;
+}
+
+.category_box > ul {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.category_box > ul > li {
+  width: 100px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.category_box > ul > li:hover {
+  border: 1px solid #a6a6a6;
+}
+
+.notice_table {
+  width: 1200px;
+  height: auto;
+  text-align: center;
+  background-color: #f2f2f2;
+  border: none;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  border-top: 2px solid #646464;
+  border-collapse: collapse;
+}
+
+.notice_table > thead {
+  height: 35px;
+}
+
+.notice_table > thead > tr > td {
+  border-bottom: 1px solid #a6a6a6;
+}
+
+.notice_table > thead > tr > td:first-of-type {
+  width: 50px;
+  height: auto;
+}
+
+.notice_table > thead > tr > td:nth-of-type(2) {
+  width: 80px;
+  height: auto;
+}
+
+.notice_table > thead > tr > td:nth-of-type(4) {
+  width: 100px;
+  height: auto;
+}
+
+.notice_table > thead > tr > td:nth-of-type(5) {
+  width: 120px;
+  height: auto;
+}
+
+.notice_table > thead > tr > td:last-of-type {
+  width: 80px;
+  height: auto;
+}
+
+.notice_table > tbody {
+  background-color: white;
+}
+
+.notice_table > tbody > tr {
+  position: relative;
+  height: 40px;
+}
+
+.notice_table > tbody > tr > td {
+  position: relative;
+  border-bottom: 1px solid #a6a6a6;
+}
+
+.notice_table > tbody > tr > td:nth-of-type(3) {
+  text-indent: 10px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.notice_table > tbody > tr > td:nth-of-type(3) > a {
+  color: black;
+}
+
+.notice_table > tbody > tr > td:nth-of-type(3) > a:hover {
+  text-decoration: underline;
+}
+
+.notice_table > tfoot {
+  height: 35px;
+  background-color: white;
+  border-bottom: 1px solid #a6a6a6;
+}
+
+.notice_page {
+  width: 1200px;
+  height: 30px;
+  line-height: 30px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.notice_page > ul {
+  display: inline;
+}
+
+.notice_page > ul > li {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 5px;
+  border: 1px solid #a6a6a6;
+  color: black;
+  display: inline-block;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.notice_page > ul > li:hover {
+  border: 1px solid #646464;
+}
+
+.notice_foot {
+  width: 1200px;
+  height: 50px;
+  line-height: 50px;
+  margin-top: 10px;
+  margin: 0 auto;
+  text-align: right;
+}
+
+.notice_foot > input {
+  display: inline-block;
+  width: 100px;
+  height: 35px;
+  border-radius: 3px;
+  background-color: #7f859c;
+  color: white;
+  font-size: 90%;
+  border: none;
+}
+
+.notice_write_table {
+  width: 1200px;
+  height: auto;
+  text-align: center;
+  background-color: #f2f2f2;
+  border: none;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  border-top: 2px solid #646464;
+  border-collapse: collapse;
+}
+
+.notice_write_table > tbody {
+  background-color: white;
+}
+
+.notice_write_table > tbody > tr {
+  height: 45px;
+}
+
+.notice_write_table > tbody > tr > td {
+  border-bottom: 1px solid #a6a6a6;
+}
+
+.notice_write_table > tbody > tr > td:first-of-type {
+  width: 180px;
+  height: auto;
+}
+
+.notice_write_table > tbody > tr > td:nth-of-type(2) {
+  text-align: left;
+}
+
+.notice_write_table > tbody > tr > td > select {
+  width: 200px;
+  height: 35px;
+  border: 1px solid #ccc;
+}
+
+.notice_write_table > tbody > tr > td > input[type="text"], .notice_write_table > tbody > tr > td > input[type="password"] {
+  text-indent: 10px;
+  width: 20%;
+  height: 35px;
+  border: 1px solid #ccc;
+}
+
+.notice_write_table > tbody > tr > td > .binput {
+  width: 40% !important;
+}
+
+.notice_write_table > tbody > tr > td > .rdinput {
+  display: inline-block;
+  padding-left: 5px;
+  width: 50px;
+  height: auto;
+  line-height: auto;
+}
+
+.comment {
+  margin-left: 10px;
+  display: inline;
+  line-height: 35px;
+  font-size: 90%;
+  color: #2e6631;
+}
+
+.faq_write_foot {
+  width: 1200px;
+  height: 50px;
+  line-height: 50px;
+  margin: 0 auto;
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.faq_write_foot > input {
+  display: inline-block;
+  width: 100px;
+  height: 35px;
+  border-radius: 3px;
+  background-color: #a6a6a6;
+  color: white;
+  font-size: 90%;
+  border: none;
+}
+
+.faq_write_foot > input:last-of-type {
+  background-color: #7f859c;
+}
+
+.faq_modify_foot {
+  width: 1200px;
+  height: 50px;
+  line-height: 50px;
+  margin: 0 auto;
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.faq_modify_foot > input {
+  display: inline-block;
+  width: 100px;
+  height: 35px;
+  border-radius: 3px;
+  background-color: #a6a6a6;
+  color: white;
+  font-size: 90%;
+  border: none;
+}
+
+.faq_modify_foot > input:last-of-type {
+  background-color: #2e3866;
+}
+
+.showhandle {
+  display: table-row !important;
+}
+/*# sourceMappingURL=notice.css.map */

@@ -1,0 +1,55 @@
+<?php
+    $v = date("YmidHis");
+    include "check.php";
+    include "config.php";
+?>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>쇼핑몰 관리자</title>
+    <script src="../../js/jquery.js"></script>
+    <script src="./info.js?v=<?=$v?>"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <link rel="stylesheet" type="text/css" href="admin.css?v=<?=$v?>">
+    <link rel="stylesheet" type="text/css" href="main.css?v=<?=$v?>">
+    <link rel="stylesheet" type="text/css" href="bottom.css?v=<?=$v?>">
+    <link rel="stylesheet" type="text/css" href="banner.css?v=<?=$v?>">
+    <script>
+        const eff = "<?php echo $banner_effect?>";
+        // F : 페이드 배너 / R : 롤링 배너
+        let level = '<?php echo $alevel?>';
+
+    </script>
+</head>
+<body>
+<header class="header">
+    <?php include "admin_top.html"; ?>
+</header>
+<section class="section" id="banner">
+    <?php include "banner_list.html"; ?>
+</section>
+<footer class="footer">
+    <?php include "admin_bottom.html"; ?>
+</footer>
+</body>
+<script>
+    if(level!="M"){
+        document.querySelector(".banner_del").innerHTML = "";
+    }
+</script>
+<script src="./banner_list.js?v=<?=$v?>"></script>
+<script src="./banner.js?v=<?=$v?>"></script>
+<script>
+/* */
+if(eff=="R"){
+    document.getElementsByName("effect")[0].checked=true;
+}
+else {
+    document.getElementsByName("effect")[1].checked=true;
+}
+
+</script>
+</html>

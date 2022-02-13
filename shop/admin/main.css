@@ -1,0 +1,222 @@
+@charset "UTF-8";
+ul, ol { list-style: none; margin: 0; padding: 0;}
+a { text-decoration: none; color: white; }
+.header { 
+    height: 140px; background-color: #8e93ae;
+}
+.section {
+    height: auto; 
+    font-size: 14px;
+    /* font-size: calc(0em+14px); */
+}
+
+/* font size part */
+.font_view2 {font-size: 16px;}
+.font_view3 {font-size: 18px;}
+
+/* header part */
+.adm_top {
+    height: 100px;
+    font-weight: 300;
+}
+.adm_top > span:nth-child(1) {
+    width: 50%;
+    color: white;
+    height: 100px;
+    line-height: 100px;
+    font-size: 20px;
+    padding-left: 30px;
+    float: left;
+}
+.adm_top > span:nth-child(1) > a {
+    letter-spacing: 4px;
+    font-weight: 500;
+}
+.adm_top > span:nth-child(2) {
+    width: 50%;
+    height: 100px;
+    line-height: 40px;
+    text-align: right;
+    color: white;
+    float: left;
+    font-size: 14px;
+    padding-right: 10px;
+}
+.adm_top > span:nth-child(2) > a {
+    margin-left: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.header_box { 
+    height: 40px; background-color: #7f859c;
+    /* #7f859c; */
+}
+.menu {
+    width: 1200px;
+    height: 40px;
+    color: white;
+    font-weight: 300;
+}
+.menu > li {
+    float: left;
+    min-width: 140px;
+    max-width: 180px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+}
+.menu > li:hover {
+    background-color: #767c93;
+}
+/* section part */
+.info_box {
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid rgb(70, 70, 70);
+}
+.info_title {
+    height: 40px;
+    line-height: 40px;
+    float: left;
+    padding-left: 15px;
+}
+.tsbox {
+    position: absolute; right: 5px; margin-top: 5px; display: inline-block;
+}
+.tsbox > li {
+    position: relative; 
+    display: inline-block; 
+    margin-left: 2px; cursor: pointer;
+}
+
+/* table main part */
+.info_list1, .info_list2 {
+    width: 1200px;
+    margin: 0 auto;
+}
+.info_list1 { height: 50px; line-height: 50px; font-size: 140%; font-weight: bold; }
+.info_list2 { height: 30px; line-height: 30px; font-size: 110%; }
+
+/* new_member table */
+.tablecss {
+    width: 1200px;
+    text-align: center;
+    margin: 0 auto;
+}
+.trcss, .qatr, .point_tr {
+    border-top: 2px solid #646464;
+    background-color : #f2f2f2;
+}
+.trcss2 {
+    height: 35px;
+}
+.trcss > td, .trcss2 > td { 
+    border-right: 1px solid #fff;
+}
+.trcss > td:nth-child(1) { 
+    width: 70px;
+    height: 35px;
+}
+.trcss > td:nth-child(2) {
+    width: 220px;
+}
+.trcss > td:nth-child(3) {
+    width: 200px;
+}
+.trcss > td:nth-child(4) { 
+    width: 200px;
+    height: 35px;
+}
+/* .trcss2 > td:nth-child(5) {
+    text-align: left;
+    height: 35px;
+    text-indent: 10px;
+} */
+
+.tbottom {
+    width: 1200px;
+    height: 40px;
+    margin: 0 auto;
+}
+.tbottom > span {
+    width: 100px;
+    height: 40px;
+    float: right;
+    padding-top: 10px;
+}
+.tbottom > span > input {
+    width: 100px;
+    height: 35px;
+    border-radius: 3px;
+    border: none;
+    background-color: #7f859c;
+    color: white;
+}
+.none {
+    display: none;
+}
+.none > td { 
+    height: 35px;
+}
+/* QA table */
+.QAtable { 
+    width: 1200px;
+    border: 1px solid #fff;
+    text-align: center;
+    margin: 0 auto;
+}
+.qatr > td, .qatr2 > td {
+    border-right: 1px solid #fff;
+    height: 35px;
+}
+
+.qatr > td:nth-child(1) {
+    width: 70px;
+}
+.qatr > td:nth-child(2) {
+    width: 150px;
+}
+
+.qatr > td:nth-child(4) {
+    width: 150px;
+}
+.qatr > td:nth-child(5) {
+    width: 200px;
+}
+.qatr2 {
+    /* display: none; */
+}
+#qalist > tr > td:nth-child(3) {
+    text-align: left;
+    text-indent: 10px;
+}
+
+/* point table  */
+.point_table {
+    width: 1200px;
+    text-align: center;
+    margin: 0 auto;
+}
+.point_tr2 {
+    display: none;
+}
+.point_tr > td, .point_tr2 > td {
+    border-right: 1px solid #fff;
+    height: 35px;
+}
+.point_tr2 > td:nth-child(5) {
+    text-align: left;
+    text-indent: 10px;
+    width: 400px;
+}
+
+
+
+/* footer part */
+.footer {
+    margin-top: 30px;
+    height: 100px; 
+    border-top: 1px solid rgb(70, 70, 70);
+}

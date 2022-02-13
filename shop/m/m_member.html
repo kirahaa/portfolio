@@ -1,0 +1,45 @@
+<?php
+    $v = date("YmdHis");
+?>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./m_member.css">
+    <title>모바일 회원가입</title>
+</head>
+<body>
+    <section>
+        <form name="mem_frm" >
+            <input type="hidden" name="mlevel" value="1">
+            <input type="hidden" name="mcerti" value="Y">
+            <input type="hidden" name="magree1" value="Y">
+            <input type="hidden" name="magree2" value="Y">
+        <div class="wrapper">
+            <h2>MEMBERSHIP</h2>
+            <ul class="main">
+                <li><input type="text" name="mid" placeholder="ID"></li>
+                <li><input type="password" name="mpass" id="mpass" placeholder="PASSWORD" readonly></li>
+                <li class="keyboard_box" id="keyboard_box">
+                    <ol id="member_key">
+        
+                    </ol>
+                    <span><input type="button" value="완료" id="pw_ok"></span>
+                </li>
+                <li><input type="text" name="mname" placeholder="NAME"></li>
+                <li><input type="email" name="memail" placeholder="EMAIL"></li>
+                <li><input type="tel" name="mhp" placeholder="PHONE NUMBER"></li>
+                <li><input type="text" name="mnick" placeholder="NICKNAME"></li>
+                <li><input type="button" value="회원가입" id="join_btn"></li>
+            </ul>
+        </div>
+        </form>
+    </section>
+</body>
+<script type="module">
+    import {create_keyboard} from "./m_member.js?v=<?=$v?>";
+    create_keyboard();
+</script>
+</html>

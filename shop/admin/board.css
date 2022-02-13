@@ -1,0 +1,173 @@
+@charset "UTF-8";
+/* 게시판 리스트 */
+.board_article { 
+   width: 100%; 
+   
+}
+.board_box {
+   width: 1200px;
+   margin: 0 auto; 
+   text-align: center; 
+}
+.board_article_title { 
+   height: 40px; 
+   line-height: 40px; 
+   background-color: rgb(242, 242, 242); 
+   font-size: 110%;
+}
+
+/* table 전 전체 목록 & 검색 설정 */
+.board_article_title > ul { 
+   width: 1200px; 
+   height: 40px; 
+   margin: 0 auto;
+}
+.board_article_title > ul > li { display: inline-block; }
+.board_article_option { 
+   width: 100%; 
+   height: 100;
+   text-align: left;
+   border-bottom: 1px solid #ccc; 
+   padding: 60px 0 15px 0px;
+
+}
+.board_article_option > input { 
+   width: 300px; 
+   height: 35px;
+   border: 1px solid #ccc;
+   text-indent: 10px;
+}
+.board_article_option > input[type="submit"]{
+   width: 80px; 
+   height: 35px; 
+   background-color: #a6a6a6; 
+   border-radius: 3px;
+   text-indent: 0;
+   color: white;
+   border: none;
+}
+.board_article_option > select {
+   border: 1px solid #ccc;
+   height: 35px;
+}
+.spart { 
+    width: 80px;
+    height: 25px;
+}
+
+/* form */
+.board_article_table { width: 100%; height: auto; border: 1px solid #ccc;}
+.board_article_table_option { background-color: #ddd; }
+.board_article_table_option > th { 
+   text-align: center; border-right: 1px solid #ccc;
+}
+.board_option_input { width: 150px;}
+.board_option_input_s { width: 25px; text-align: center;}
+.board_article_table_option > td {
+   height: 40px; background-color: #eee; ; 
+   border-right: 1px solid #ccc;
+   border-bottom: 1px solid #ccc; text-align: center; 
+}
+.board_article_table_option > td:last-child {
+   width: 100px;
+}
+.board_article_table_option > td:last-child > label > span {
+   display: inline-block;
+   width:40px;
+   height:25px;
+   border: 1px solid #a6a6a6;
+   border-radius: 5px;
+   background-color: #eee;
+   line-height: 25px;
+   font-size: 80%;
+}
+.board_article_table_option > td:last-child > label > span:hover {
+   border: 1px solid rgb(100,100,100);
+}
+.board_article_table_list { 
+   display: none; width: 100%; height: 40px; 
+   border-bottom: 1px solid #ccc;
+}
+.board_article_table_list_none { width: 100%; height: 40px; text-align: center;}
+
+/* 버튼 */
+.board_article_table_btns { width: 100%; height: 50px; line-height: 50px; text-align: right; }
+.board_article_table_btns>button { width: 100px; line-height: 35px; border: none; background-color: #2e3866; color: white; border-radius: 3px;}
+
+
+
+/* modify part */
+label{ display: block;}
+
+/* 게시판 리스트 */
+.board_config { 
+   width: 1200px; 
+   height: 750px; 
+   margin: 0 auto; 
+   text-align: center; 
+}
+.board_config_caption { 
+   text-align: left;
+   height: 50px; 
+   line-height: 50px; 
+   font-size: 120%; 
+   font-weight: bold;
+   border-bottom: 1px solid #ccc;
+}
+
+/* form */
+.board_config_table { width: 100%; height: auto;}
+.board_config_option { height: 60px; border-bottom: 1px solid #ccc; }
+.board_config_option > th { width: 15%; text-align: left; text-indent: 5px;}
+.board_config_option > td { width: 65%; text-align: left; }
+.board_config_option2 {
+   border-left: 1px solid #ccc;
+   padding-left: 5px;
+}
+.config_option_info { 
+   color: rgb(46, 102, 49);
+   font-size: 80%;
+}
+.board_option_input { 
+   width: 150px; 
+   line-height: 25px;
+   border: 1px solid #ccc;
+}
+.board_select {
+   height: 28px;
+   border: 1px solid#ccc;
+}
+.board_btn { 
+   width: 120px;
+   line-height: 28px; 
+   border-radius: 5px;
+   border: none;
+   background-color: #a6a6a6;
+   color: white;
+ }
+.big {
+   width: 700px;  
+}
+.use_ck {
+   margin-left: 20px;
+   line-height: 20px;
+}
+/* 버튼 */
+.board_config_btns { 
+   width: 100%; 
+   height: 50px; 
+   line-height: 50px; 
+   text-align: center; 
+}
+.board_config_btns > button:nth-child(1), .board_config_btns > button:nth-child(2) { 
+   width: 50px;
+}
+.board_config_btns > button { 
+   width: 120px;
+   height: 30px;
+   border-radius: 5px;
+   line-height: 30px; 
+   background-color: rgb(70, 70, 70);
+   color: white;
+   border: none; 
+}

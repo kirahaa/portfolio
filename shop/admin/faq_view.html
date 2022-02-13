@@ -1,0 +1,62 @@
+<meta charset="UTF-8">
+<article class="info_box">
+    <span class="info_title">FAQ</span>
+    <ul class="tsbox">
+      <li onclick="fontclass('1')"><img src="../image/ts01.gif" alt="../image/ts01.gif" title="보통"></li>
+      <li onclick="fontclass('2')"><img src="../image/ts02.gif" alt="../image/ts02.gif" title="크게"></li>
+      <li onclick="fontclass('3')"><img src="../image/ts03.gif" alt="../image/ts03.gif" title="더 크게"></li>
+    </ul>
+</article>
+<!-- 제작 -->
+<div id="faq"> <!-- Vue ID -->
+<article>
+<div class="faq_wrapper">
+    <label>
+      <span>FAQ 수정</span>
+    </label>
+</div>
+</article>
+<form name="frm_faq" id="frm_faq" method="POST" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="fid" value="<?php echo $aid ?>">
+<input type="hidden" name="fsubject" value="delete_faq">
+<input type="hidden" name="fidx" id="fidx" value="">
+<table class="faq_write_table">
+    <tbody>
+        <tr>
+            <td>카테고리</td>
+            <td>
+                <select name="fcate" id="fcate">
+                    <option value="">카테고리를 선택하세요</option>
+                    <option value="1">배송문의</option>
+                    <option value="2">반품/교환/환불</option>
+                    <option value="3">주문/결제</option>
+                    <option value="4">회원서비스</option>
+                    <option value="5">안전거래</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>질문내용</td>
+            <td>
+                <input type="text" name="fqtext" id="fqtext">
+            </td>
+        </tr>
+        <tr>
+            <td>답변내용</td>
+            <td><textarea name="fatext" id="fatext" ></textarea></td>
+            <script>
+                CKEDITOR.replace("fatext",{height:300});
+            </script>
+        </tr>
+    </tbody>
+</table>
+
+<!-- button -->
+<div class="faq_modify_foot"> 
+    <input type="hidden" id="go_list">
+    <input type="hidden" id="faq_input">
+    <input type="button" value="삭제" id="faq_delok"> 
+    <input type="button" value="수정완료" id="faq_modifyok"> 
+</div>
+</form>
+</div>

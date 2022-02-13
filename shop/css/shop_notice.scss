@@ -1,0 +1,129 @@
+@charset "UTF-8";
+@import "./index.scss";
+
+.shopn_wrap {
+    padding: 50px 0;
+    @include object(1200px, auto);
+    margin: 0 auto;
+    & > h3 {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    & > table {
+        @include object(100%,auto);
+        border: none;
+        border-top: 2px solid rgb(100,100,100);
+        border-collapse: collapse;
+        text-indent: 10px;
+        font-size: $font_size_medium;
+        & > tbody {
+            & > tr {
+                & > td {
+                    border-bottom: 1px solid #ddd;
+                    &:first-of-type {
+                        @include object(150px,40px);
+                        // border-right: 1px solid #ddd;
+                        background-color: #f6f7fb;
+                    }
+                    
+                    
+                }
+                &:nth-of-type(3){
+                    & > td {
+                        &:nth-of-type(2){
+                            @include object(150px,auto);
+                            // border-right: 1px solid #ddd;
+                        }
+                        &:nth-of-type(3){
+                            @include object(150px,auto);
+                            // border-right: 1px solid #ddd;
+                            background-color: #f6f7fb;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.n_contents {
+    @include object(100%,400px);
+    overflow-y: scroll;
+    padding: 15px 12px;
+    border-bottom: 1px solid #ddd;
+    color: $font_color_black0;
+    font-size: $font_size_large;
+}
+.n_btn_wrap {
+    padding: 15px 0;
+    & > button {
+        @include object(120px,35px);
+        border: none;
+        background-color: $font_color_black2;
+        color: white;
+        float: right;
+    }
+}
+
+/* notice_list */
+.nlist_wrap {
+    padding: 50px 0;
+    @include object(1200px, auto);
+    margin: 0 auto;
+    & > h3 {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    & > table {
+        margin: 0 auto;
+        @include object(1020px,auto);
+        border: none;
+        border-top: 2px solid rgb(100,100,100);
+        border-collapse: collapse;
+        text-align: center;
+        font-size: $font_size_medium;
+        & > thead {
+            background-color: #f6f7fb;
+            & > tr {
+                height: 40px;
+                & > td {
+                    &:first-of-type {
+                        width: 80px;
+                    }
+                    &:nth-of-type(2) {
+                        width: 600px;
+                    }
+                    &:last-of-type {
+                        width: 80px;
+                    }
+                }
+            }
+        }
+        & > tbody {
+            & > tr {
+                height: 40px;
+                cursor: pointer;
+                & > td {
+                    &:nth-of-type(2){
+                        text-align: left;
+                        text-indent: 10px;
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+.notice_page {
+    text-align: center;
+    padding-top: 50px;
+    & > label {
+        display: inline-block;
+        @include object(30px,30px,);
+        border: 1px solid $font_color_black;
+        border-radius: 5px;
+        line-height: 30px;
+        text-align: center;
+        cursor: pointer;
+        margin: 0 5px;
+    }
+}

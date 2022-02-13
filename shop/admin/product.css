@@ -1,0 +1,364 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.product__wrapper {
+  width: 100%;
+  height: 40px;
+  background-color: #f2f2f2;
+  margin-bottom: 60px;
+}
+
+.product__wrapper > label {
+  display: block;
+  width: 1200px;
+  height: 40px;
+  line-height: 40px;
+  margin: 0 auto;
+}
+
+.product__wrapper > label > span {
+  font-size: 110%;
+}
+
+.product_search {
+  width: 1200px;
+  height: 60px;
+  line-height: 60px;
+  margin: 0 auto;
+}
+
+.product_search > input[type=text] {
+  text-indent: 10px;
+  border: 1px solid #ccc;
+  width: 300px;
+  height: 35px;
+}
+
+.product_search > button {
+  width: 80px;
+  height: 35px;
+  background-color: #a6a6a6;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  margin-right: 5px;
+}
+
+.product_table {
+  width: 1200px;
+  height: auto;
+  text-align: center;
+  background-color: #f2f2f2;
+  border: none;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  border-top: 2px solid #646464;
+  border-collapse: collapse;
+}
+
+.product_table > thead {
+  height: 35px;
+}
+
+.product_table > thead > tr > td {
+  border-bottom: 1px solid #a6a6a6;
+}
+
+.product_table > thead > tr > td:first-of-type {
+  width: 50px;
+  height: auto;
+}
+
+.product_table > thead > tr > td:nth-of-type(7) {
+  width: 90px;
+  height: auto;
+}
+
+.product_table > thead > tr > td:last-of-type {
+  width: 90px;
+  height: auto;
+}
+
+.product_table > tbody {
+  background-color: white;
+}
+
+.product_table > tbody > tr {
+  height: 35px;
+}
+
+.product_table > tbody > tr > td {
+  border-bottom: 1px solid #a6a6a6;
+}
+
+.product_table > tbody > tr > td:nth-of-type(3) {
+  text-align: left;
+  text-indent: 10px;
+}
+
+.product_table > tbody > tr > td:nth-of-type(6) {
+  width: 200px;
+}
+
+.product_table > tbody > tr > td:nth-of-type(6) > img {
+  width: 150px;
+  height: 50px;
+  margin-top: 3px;
+}
+
+.product_table > tbody > tr > td:last-of-type > input {
+  width: 50px;
+  height: 25px;
+  border: 1px solid #a6a6a6;
+  border-radius: 5px;
+  background-color: #eee;
+  line-height: 25px;
+}
+
+.product_table > tbody > tr > td:last-of-type > input:hover {
+  border: 1px solid #646464;
+}
+
+.product_table > tbody a {
+  color: black;
+  cursor: pointer;
+}
+
+.product_table > tbody a:hover {
+  border-bottom: 1px solid black;
+}
+
+.product_table > tfoot {
+  height: 35px;
+  border: 1px solid #a6a6a6;
+}
+
+.product_page {
+  width: 1200px;
+  height: 30px;
+  line-height: 30px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.product_page > ul {
+  display: inline;
+}
+
+.product_page > ul > li {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 5px;
+  border: 1px solid #a6a6a6;
+  color: black;
+  display: inline-block;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.product_page > ul > li:hover {
+  border: 1px solid #646464;
+}
+
+.product_foot {
+  width: 1200px;
+  height: 50px;
+  line-height: 50px;
+  margin: 0 auto;
+  text-align: right;
+}
+
+.product_foot > input {
+  display: inline-block;
+  width: 100px;
+  height: 35px;
+  border-radius: 3px;
+  background-color: #a6a6a6;
+  color: white;
+  border: none;
+}
+
+.product_foot > input:last-of-type {
+  background-color: #7f859c;
+}
+
+.newproduct_foot {
+  width: 1200px;
+  height: 50px;
+  line-height: 50px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.newproduct_foot > input {
+  display: inline-block;
+  width: 100px;
+  height: 30px;
+  border-radius: 3px;
+  background-color: #a6a6a6;
+  color: white;
+  font-size: 90%;
+  border: none;
+}
+
+.newproduct_foot > input:last-of-type {
+  background-color: #7f859c;
+}
+
+.newpd_table {
+  width: 1200px;
+  height: auto;
+  text-align: center;
+  background-color: #f2f2f2;
+  border: none;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  border-top: 2px solid #646464;
+  border-collapse: collapse;
+}
+
+.newpd_table > tbody > tr > td {
+  height: 45px;
+  text-align: left;
+  text-indent: 10px;
+  border-bottom: 1px solid #a6a6a6;
+}
+
+.newpd_table > tbody > tr > td:first-of-type {
+  width: 200px;
+  height: auto;
+}
+
+.newpd_table > tbody > tr > td:last-of-type {
+  background-color: white;
+}
+
+.newpd_table > tbody > tr > .filetd {
+  padding-bottom: 10px;
+}
+
+.newpd_table > tbody > tr > .filetd > div {
+  width: auto;
+  height: 35px;
+  line-height: 35px;
+}
+
+.newpd_table > tbody > tr .txtalign {
+  text-align: right;
+}
+
+.newpd_table .text_area {
+  text-indent: 5px;
+  margin-top: 3px;
+  resize: none;
+  width: 70%;
+  height: 60px;
+  border: 1px solid #ccc;
+}
+
+.newpd_table input[type=text] {
+  text-indent: 5px;
+  width: 200px;
+  height: 30px;
+  border: 1px solid #ccc;
+}
+
+.newpd_table .racss {
+  display: inline-block;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+}
+
+.newpd_table .longinput {
+  width: 70% !important;
+  border: 1px solid #ccc;
+}
+
+.newpd_table .pics_part {
+  display: inline;
+  margin-top: 3px;
+  padding-left: 10px;
+  line-height: 30px;
+  float: left;
+}
+
+.newpd_table .pics_part > label {
+  display: block;
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid #a6a6a6;
+  border-radius: 5px;
+  background-color: #efefef;
+  font-size: 12px;
+  text-indent: 15px;
+  float: left;
+}
+
+.newpd_table .pics_part > label > input[type=file] {
+  display: none;
+}
+
+.newpd_table .pics_part > span {
+  float: left;
+}
+
+.comment {
+  display: inline;
+  line-height: 35px;
+  font-size: 90%;
+  color: #7f859c;
+}
+
+.imgview {
+  display: block;
+  width: 100px;
+  height: 30px;
+  float: left;
+}
+
+.imgview > img {
+  display: block;
+  width: 100px;
+  height: 30px;
+}
+
+.imgdelbtn {
+  display: block;
+  width: 100px;
+  height: 30px;
+  float: left;
+}
+
+.imgdelbtn > input {
+  width: 80px;
+  height: 30px;
+  border: 1px solid #a6a6a6;
+  border-radius: 5px;
+}
+/*# sourceMappingURL=product.css.map */

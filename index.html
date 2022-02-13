@@ -1,0 +1,374 @@
+<?php
+    $v = date("YmdHis");
+?>
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김하영 | Portfolio</title>
+    <link type="text/css" rel="stylesheet" href="./css/index.css?v=<?=$v?>">
+    <link type="text/css" rel="stylesheet" href="./css/media.css?v=<?=$v?>">
+    <link rel="shortcut icon" href="./img/favicon.png">
+    <script src="./js/jquery.js"></script>
+    <script src="https://kit.fontawesome.com/dedef9bb55.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=83edf7a9cdf78d6fa78775aa5320b3b4"></script>
+</head>
+
+<body>
+    <section class="root">
+        <aside class="box1">
+            <div>
+                <ul>
+                    <li class="mepic">
+                        <span id="me"><img src="./img/me_icon.png" alt=""></span>
+                    </li>
+                    <li class="aboutme">
+                        <label class="bold"> 안녕하세요. </label><br>
+                        <label class="character">
+                            <label class="highlight">꼼꼼한 성격</label>과<br>
+                            <label class="highlight">긍정적인 마인드를 가진</label><br>
+                        </label>
+                        <label style="font-weight: bold; font-size: 20px;">Front 개발자 김하영입니다.</label>
+                        <a href="mailto:khy4018@gmail.com" class="atag">khy4018@gmail.com</a><br>
+                        <a href="https://www.instagram.com/arrohaa/" class="sns_ico atag"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/kirahaa" class="sns_ico atag"><i class="fab fa-github"></i></a>
+                        <label class="more" id="more">
+                            more<br>
+                            <i class="fas fa-chevron-down"></i>
+                        </label>
+                    </li>
+                    <li class="aboutme2">
+
+                        <label>
+                            사람들의 삶을 개선시킬 수 있는 <br>
+                            개발자가 되고 싶습니다.
+                        </label>
+                        <label>
+                            저에 대해 궁금한 점이 있으시다면,
+                        </label>
+                        <label>
+                            <a href="mailto:khy4018@gmail.com" class="m_email">khy4018@gmail.com</a><br>
+                            위의 이메일로 언제든 연락주세요!
+                        </label>
+                        <label>
+                            봐주셔서
+                            감사합니다!
+                        </label>
+                        <label class="sns_box">
+                            <a href="https://www.instagram.com/arrohaa/" class="sns_ico"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a href="https://github.com/kirahaa" class="sns_ico"><i class="fab fa-github"></i></a>
+                        </label>
+                    </li>
+                    <li class="aboutme3">
+                        <label>
+                            현재 페이지는<br>
+                            JAVASCRIPT / SCSS 등을 이용하여<br>
+                            만들었습니다.<br>
+                        </label>
+                    </li>
+                    <li class="copyright">© 2021 Created By HY</li>
+                </ul>
+            </div>
+        </aside>
+
+        <article class="box2" id="box2">
+            <ul>
+                <li id="mode"><img src="./img/moon.png" alt=""></li>
+                <li id="introbtn"><img src="./img/introduce.png" alt=""></li>
+                <li id="projectbtn"><img src="./img/folder.png" alt=""></li>
+                <li id="infobtn"><img src="./img/woman.png" alt=""></li>
+                <li id="contactbtn"><img src="./img/contact.png" alt=""></li>
+            </ul>
+        </article>
+
+        <aside class="box3">
+            <div class="main_box" id="main_box">
+                <h3 id="introduce_title">INTRODUCE</h3>
+                <ul class="introduce">
+                    <li class="intro">
+                        <span>안녕하세요!</span>
+                        호기심 많은 신입 Front-end 개발자 김하영입니다.<br>
+                        UI/UX에 관심이 많고 JAVASCRIPT와 CSS를 가장 좋아합니다.<br>
+                        매일 새로운 것에 도전하고 발전해나가며 언젠가 저만의 브랜드를 만드는 것이 꿈입니다 :)
+                    </li>
+                    <li class="skills_title">
+                        <fieldset>
+                            <legend>Skills</legend>
+                        </fieldset>
+                    </li>
+                    <li class="skills" id="skills">
+                        <dl>
+                            <dt><img src="./img/html.png" alt=""></dt>
+                            <dd>HTML</dd>
+                        </dl>
+                        <dl>
+                            <dt><img src="./img/css.png" alt=""></dt>
+                            <dd>CSS</dd>
+                        </dl>
+                        <dl>
+                            <dt><img src="./img/js.png" alt=""></dt>
+                            <dd>Javascript</dd>
+                        </dl>
+                        <dl>
+                            <dt><img src="./img/ecma.png" alt=""></dt>
+                            <dd>ES6</dd>
+                        </dl>
+                        <dl>
+                            <dt><img src="./img/jquery.png" alt=""></dt>
+                            <dd>Jquery</dd>
+                        </dl>
+                        <dl>
+                            <dt><img src="./img/ajax.png" alt=""></dt>
+                            <dd>Ajax</dd>
+                        </dl>
+                        <dl>
+                            <dt><img src="./img/scss.png" alt=""></dt>
+                            <dd>Scss</dd>
+                        </dl>
+                        <dl>
+                            <dt><img src="./img/Vue.png" alt=""></dt>
+                            <dd>Vue</dd>
+                        </dl>
+                    </li>
+                </ul>
+                <h3 id="projects_title" class="projects_title">PROJECTS</h3>
+                <ul class="projects">
+
+                    <dl>
+                        <dt>
+                            <span id="go_web9" link="../blip/index.html">
+                                <img src="../blip/img/yr.jpg" alt="">
+                                <label class="blackscreen">click to view</label>
+                            </span>
+                        </dt>
+                        <dd>
+                            <h4>백예린 팬페이지</h4>
+                            <span class="main_contents">
+                                Period : 2021.10 ~<br>
+                                #HTML #CSS #SCSS #Javascript<br>
+                                개인 프로젝트로 진행된 백예린 팬페이지입니다.<br>
+                                반응형 페이지이며 기획, 디자인 모두 직접 작업하였습니다. 
+                            </span>
+                        </dd>
+                    </dl>
+
+                </ul>
+                <ul class="projects" id="projects">
+
+                    <dl>
+                        <dt>
+                            <span id="go_web0" link="./shop/index.html">
+                                <img src="./img/p_main1.png" alt="">
+                                <label class="blackscreen">click to view</label>
+                            </span>
+                        </dt>
+                        <dd>
+                            <h4>쇼핑몰 메인 페이지 (한우사랑)</h4>
+                            <span class="main_contents">
+                                Period : 2021.06 - 2021.07<br>
+                                #HTML #CSS #SCSS #Javascript #Jquery #Ajax #Json #SEO #PG<br>
+                                관리자 페이지를 통해 모든 데이터를 파서하여 제작한 웹 전용 메인페이지입니다.<br>
+                                로그인, 회원가입, 상품 상세페이지, 상품 결제시스템까지 구현한 쇼핑몰입니다.<br>
+                            </span>
+                        </dd>
+                    </dl>
+
+                </ul>
+                <ul class="projects">
+                    <dl>
+                        <dt>
+                            <span id="go_web1" link="./shop/admin/index.html">
+                                <img src="./img/admin.png" alt="">
+                                <label class="blackscreen">click to view</label>
+                            </span>
+                        </dt>
+                        <dd>
+                            <h4>관리자 페이지</h4>
+                            <span class="main_contents">
+                                Period : 2021.06 - 2021.07<br>
+                                #HTML #CSS #SCSS #Javascript #Jquery #Ajax #Json #Vue #Ckeditor #ECMA<br>
+                                동적인 웹 쇼핑몰을 제작하기 위한 관리자 페이지입니다.<br>
+                                배너, FAQ, NOTICE, 회원관리, 상품등록 등 다양한 기능을 사용할 수 있도록 제작되었습니다.<br>
+                                모든 페이지는 BACK-END와 함께 제작하였으며, My-sql을 이용하여 데이터를 저장하였습니다.<br>
+                                <!-- ID : admin / PW : a123456 -->
+                            </span>
+                        </dd>
+                    </dl>
+                </ul>
+                <ul class="projects">
+                    <dl>
+                        <dt>
+                            <span id="go_web5" link="../public_html/index.html">
+                                <img src="./img/today_light.png" alt="">
+                                <label class="blackscreen">click to view</label>
+                            </span>
+                        </dt>
+                        <dd>
+                            <h4>TODAY LIGHT</h4>
+                            <span class="main_contents">
+                                Period : 2021.05<br>
+                                #HTML #CSS #SCSS #Javascript #Jquery #Ajax #Json #Vue<br>
+                                팀프로젝트로 제작되었으며, Main-Page를 포함하여 로그인, Q&A 페이지 등의 Sub-Page 3개로 이루어져있습니다.<br>
+                                Q&A는 입력후 Back-end로 전달되어 JSON이 자동으로 파싱되도록 설계되어 있습니다.
+                            </span>
+                        </dd>
+                    </dl>
+                </ul>
+                <ul class="projects">
+                    <dl>
+                        <dt class="mobile_ver">
+                            <span id="go_web7" link="../mshop/index.html">
+                                <img src="./img/minimal.png" alt="">
+                                <label class="blackscreen">click to view</label>
+                            </span>
+                        </dt>
+                        <dd>
+                            <h4>MINIMAL</h4>
+                            <span class="main_contents">
+                                Period : 2021.06<br>
+                                #HTML #CSS #SCSS #Javascript #Jquery #Ajax #Json #Vue<br>
+                                디자인 및 퍼블리싱이 외부에서 제작이 되어 있었던 것을 기획에 맞춰 전면 수정 및 재구성하여 제작한 모바일 전용 웹페이지입니다.
+                            </span>
+                        </dd>
+                    </dl>
+                </ul>
+                <ul class="projects">
+                    <dl>
+                        <dt>
+                            <span id="go_web2" link="../hellopet/index.html">
+                                <img src="./img/hellopet.png" alt="">
+                                <label class="blackscreen">click to view</label>
+                            </span>
+                        </dt>
+                        <dd>
+                            <h4>HELLOPET (PC)</h4>
+                            <span class="main_contents">
+                                Period : 2021.04<br>
+                                #HTML #CSS #Javascript #Jquery #Ajax #Json<br>
+                                팀프로젝트로 제작되었으며, 주어진 디자인과 기획에 맞춰 제작된 페이지입니다.<br>
+                                Fade 효과 및 rolling 상품 출력 등 다양한 기술 형태를 적용하였습니다.
+                            </span>
+                        </dd>
+                    </dl>
+
+                </ul>
+                <ul class="projects">
+                    <dl>
+                        <dt class="hellopet_m">
+                            <span id="go_web3" link="../middle/index.html">
+                                <img src="./img/hellopet_m1.png" alt="">
+                                <label class="blackscreen">click to view</label>
+                            </span>
+                            <span id="go_web4" link="../hellopet/myself/index.html">
+                                <img src="./img/hellopet_m2.png" alt="">
+                                <label class="blackscreen">click to view</label>
+                            </span>
+
+                        </dt>
+                        <dd>
+                            <h4>HELLOPET (MOBILE / RESPONSIBLE)</h4>
+                            <span class="main_contents">
+                                Period : 2021.05<br>
+                                #HTML #CSS #SCSS #Javascript #Jquery #Ajax #Json<br>
+                                첫번째 프로젝트는 주어진 디자인과 기획에 맞춰 제작된 모바일 전용 페이지입니다.<br>
+                                두번째는 이를 응용, 변형하여 구매하는 소비자들의 취향과 패턴을 고려해 직접 구성하고 기획하여 제작한 반응형 웹사이트입니다.
+                            </span>
+                        </dd>
+                    </dl>
+                </ul>
+                
+                <ul class="projects">
+                    <dl>
+                        <dt>
+                            <span id="go_web6" link="./event/picture.html">
+                                <img src="./img/game.png" alt="">
+                                <label class="blackscreen">click to view</label>
+                            </span>
+                        </dt>
+                        <dd>
+                            <h4>틀린 그림 찾기</h4>
+                            <span class="main_contents">
+                                Period : 2021.05<br>
+                                #HTML #CSS #Javascript #Jquery<br>
+                                고객 이벤트 페이지로 상품 홍보 및 트래픽 증가 효과를 모두 볼 수 있도록 제작된 회원전용 이벤트 페이지 입니다.
+                            </span>
+                        </dd>
+                    </dl>
+                </ul>
+                
+                <ul class="projects">
+                    <dl>
+                        <dt class="mobile_ver">
+                            <span id="go_web8" link="./event/mindex.html">
+                                <img src="./img/roullet.png" alt="">
+                                <label class="blackscreen">click to view</label>
+                            </span>
+                        </dt>
+                        <dd>
+                            <h4>룰렛을 돌려라!</h4>
+                            <span class="main_contents">
+                                Period : 2021.03<br>
+                                #HTML #CSS #Javascript #Jquery<br>
+                                랜덤 함수를 이용하여 범위 숫자를 체크하여 해당 수치에 맞춰서 회전각도를 적용한 이벤트 게임 페이지입니다.
+                            </span>
+                        </dd>
+                    </dl>
+                </ul>
+
+                <h3 id="info_title" class="info_title">INFO</h3>
+                <ul class="info">
+                    <li>NAME : 김하영</li>
+                    <li> E-MAIL : <a href="mailto:khy4018@gmail.com">khy4018@gmail.com</a></li>
+                    <li>BIRTH : 1997-04-18</li>
+                    <li>ADDRESS : Seongbuk-gu, Seoul, Republic of Korea</li>
+                    <li>Keywords : #HTML&CSS #Scss #JavaScript #jQuery #ES6 #ajax #vue.js</li>
+                    <li id="map" class="map"></li>
+                </ul>
+                <h3 id="contact_title" class="contact_title">
+                    CONTACT
+                </h3>
+                <ul class="contacts">
+                    <form name="cfrm" id="cfrm" method="POST" action="" enctype="application/x-www-form-urlencoded">
+                        <input type="hidden" name="myemail" value="qkd2074@naver.com">
+                        <li><input type="text" name="pernm" placeholder="담당자 성함을 입력해주세요" autocomplete="off"></li>
+                        <li><input type="tel" name="pertel" placeholder="연락처를 남겨주세요" autocomplete="off"></li>
+                        <li><input type="email" name="peremail" placeholder="담당자 이메일 주소를 입력해주세요" autocomplete="off"></li>
+                        <li><textarea name="pertext" placeholder="문의하실 내용을 입력해주세요"></textarea></li>
+                        <li><button type="submit">Contact</button></li>
+                    </form>
+                </ul>
+                <span class="copyright_m">© 2021 Created By HY</span>
+            </div>
+        </aside>
+    </section>
+</body>
+<script>
+    let md = window.matchMedia("screen and (min-width:990px)");
+    if (md.matches) {
+        document.write("<script src='./js/index.js?v=<?=$v?>'><" + "/script>");
+    }
+    else {
+        document.write("<script src='./js/media.js?v=<?=$v?>'><" + "/script>");
+    }
+
+    function showbox() {
+        let boxea = document.querySelectorAll(".projects").length;
+        document.querySelector(".projects_title").classList.add('show');
+        for (let i = 0; i < boxea; i++) {
+            document.querySelectorAll(".projects")[i].classList.add('show');
+        }
+    }
+
+
+    window.addEventListener("scroll", showbox)
+
+
+
+</script>
+
+</html>

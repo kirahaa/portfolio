@@ -1,0 +1,69 @@
+@charset "UTF-8";
+@mixin object($w,$h) {
+    width: $w;
+    height: $h;
+}
+@mixin lobject($w,$h) {
+    width: $w;
+    height: $h;
+    line-height: $h;
+    text-align: center;
+}
+* {
+    box-sizing: border-box;
+}
+.wrapper {
+    padding: 0 15px;
+}
+h2 {
+    margin: 15px 0;
+    text-align: center;
+    text-shadow: 1px 1px 1px #fff;
+}
+p {
+    margin: 10px 0 5px 0;
+    font-weight: bold;
+}
+.txt1 {
+    @include object(100%, 100px);
+    border: 1px solid #ccc;
+    overflow-y: scroll;
+    padding: 5px;
+    color: rgb(120, 120, 120);
+}
+.barea {
+    @include object(100%, 30px);
+    display: inline-block;
+    margin-top: 5px;
+    text-align: right;
+}
+.btnbox {
+    display: inline-block;
+    @include object(70px, 30px);
+    background-color: rgb(70, 70, 70);
+    border-radius: 30px;
+    position: relative;
+    padding: 2px;
+    & > .btn {
+        position: absolute;
+        right: 2px;
+        display: inline-block;
+        background-color: white;
+        @include object(25px, 25px);
+        border-radius: 25px;
+        box-shadow: inset 1px 1px 5px #ccc, inset -5px -5px 10px #fff;
+    }
+}
+.agreebox {
+    text-align: center;
+}
+.agree_btn {
+    @include object(100px, 35px);
+    border: none;
+    background-color:rgb(70, 70, 70);
+    color: white;
+    border-radius: 5px;
+    &:active {
+        background-color: #a4fbd0;
+    }
+}

@@ -1,0 +1,34 @@
+<!-- 회원가입 약관 -->
+<article>
+    <form name="member_agree" method="POST" enctype="application/x-www-form-urlencoded">
+    <div class="agree_wrap">
+        <h2>MEMBER JOIN</h2>
+        <div class="agree_main">
+            <h3>약관동의</h3>
+            <ul class="agree_p1">
+                <li>
+                    <label for="allagree"><input type="checkbox" id="allagree" onclick="agree_all()"> 한우사랑의 모든 약관을 확인하고 전체 동의 합니다. <span class="ared">*전체동의 선택항목도 포함됩니다.</span></label>
+                    
+                </li>
+                <li>
+                    <span class="agree_title">서비스 이용 약관동의</span>
+                    <label for="agree1"><input type="checkbox" name="agree1" id="agree1" value="Y" onclick="agree_ne()"><span class="ared">(필수)</span> 이용약관</label>
+                </li>
+                <li>
+                    <div id="agree_txt1" class="textarea"></div>
+                </li>
+            </ul>
+            <ul class="agree_p1">
+                <li>
+                    <span class="agree_title">개인정보처리방침</span>
+                    <label for="agree2"><input type="checkbox" name="agree2" id="agree2" value="Y" onclick="agree_ne()"><span class="ared">(필수)</span> 개인정보 처리방침</label>
+                </li>
+                <li>
+                    <div id="agree_txt2" class="textarea"></div>
+                </li>
+            </ul>
+        </div>
+        <div class="agree_btn"><button type="button" onclick="agree_btn()">다음단계</button></div>
+    </div>
+    </form>
+</article>

@@ -1,0 +1,50 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+$border_color : #eee;
+$font_color1 : #aaa;
+$font_color2 : #ccc;
+$font_color_black0 : #6a6969; 
+$font_color_black : #444; 
+$font_color_black2 : #303947; 
+$font_color_red : rgb(190, 0, 0);
+$font_size_small : 12px;
+$font_size_medium : 14px;
+$font_size_large : 15px;
+$font_size_xlarge : 16px;
+
+@mixin object($w,$h) {
+    width: $w;
+    height: $h;
+}
+@mixin lobject($w,$h) {
+    width: $w;
+    height: $h;
+    line-height: $h;
+    text-align: center;
+}
+@mixin back_img($img) {
+    background-image: url($img);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+ul, ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+img {
+    max-width: 100%;
+}
+a {
+    text-decoration: none;
+}
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+}

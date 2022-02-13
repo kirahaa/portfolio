@@ -1,0 +1,68 @@
+<meta charset="UTF-8">
+<div id="pd"> <!-- vue id -->
+<article class="info_box">
+    <span class="info_title">상품 관리 리스트</span>
+    <ul class="tsbox">
+      <li onclick="fontclass('1')"><img src="../image/ts01.gif" alt="../image/ts01.gif" title="보통"></li>
+      <li onclick="fontclass('2')"><img src="../image/ts02.gif" alt="../image/ts02.gif" title="크게"></li>
+      <li onclick="fontclass('3')"><img src="../image/ts03.gif" alt="../image/ts03.gif" title="더 크게"></li>
+    </ul>
+</article>
+{{getajax}}
+<!-- {{getparameter}} -->
+<article>
+    
+    <div class="product__wrapper">
+        <label>
+          <span class="member__listTotal">전체 목록 |</span>
+          총 상품 개수 <span id="total_ea">{{ea}}</span>개
+        </label>
+      </div>
+      <form name="psearch" id="psearch" ref="psearch" @submit.prevent="search_pdnm" method="GET" enctype="application/x-www-form-urlencoded">
+        <div class="product_search">
+          <input type="text" name="pnm" v-model="pnm" ref="pnm" placeholder="검색할 상품을 입력하세요" />
+          <button type="submit">상품검색</button>
+          <button type="button" @click="all_list">전체목록</button>
+        </div>
+      </form>
+      <table class="product_table">
+          <thead>
+            <tr>
+                <td>NO</td>
+                <td>상품코드</td>
+                <td>상품명</td>
+                <td>상품가격</td>
+                <td>할인가격</td>
+                <td>대표이미지</td>
+                <td>출력유무</td>
+                <td>상품삭제</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="pd,index in arrays">
+                <td>{{ea-index}}</td>
+                <td><a @click="view_product(pd.pidx)">{{pd.goodsno}}</a></td>
+                <td><a @click="view_product(pd.pidx)">{{pd.productnm}}</a></td>
+                <td>{{pd.product_money.toLocaleString()}} 원</td>
+                <td v-if="pd.product_sales==0"> - </td>
+                <td v-else>{{pd.product_sales.toLocaleString()}} 원</td>
+                <td><img :src=pd.product_img @click="popup_img(pd.product_img)" ></td>
+                <td>{{pd.product_use}}</td>
+                <td class="prd_del"><input type="button" value="삭제" @click="delete_prd(pd.pidx)"></td>
+            </tr>
+          </tbody>
+          <tfoot v-if="nodata">
+            <tr>
+              <td colspan="7">등록된 상품이 없습니다.</td>
+            </tr>
+        </tfoot>
+      </table>
+      <div class="product_page">
+        <ul>
+          <li v-for="i in pageing" @click="page_number(i)">{{i}}</li>
+        </ul>
+      </div>
+      <div class="product_foot"> <input type="button" value="상품등록" @click="go_newproduct"> </div>
+
+</article>
+</div>

@@ -1,0 +1,145 @@
+@charset "UTF-8";
+@import "./index.scss";
+.mb {
+    height: auto;
+    position: relative;
+}
+.effect1 {
+    display : none;
+    margin: 0 auto;
+    @include object(100%,534px);
+    position: relative;
+    zoom: 1;
+    & > .main_banner {
+        @include object(100%,inherit);
+        position: relative;
+        overflow: hidden;
+        & > .banners {
+            min-width: 1174px;
+            height: inherit;
+            position: relative;
+            overflow: hidden;
+            & > li {
+                display: none;
+                width: 100%;
+                position: absolute;
+                height: auto;
+                & > img {
+                    width: 100%;
+                    min-height: 534px;
+                    vertical-align: top;
+                    object-fit: cover;
+
+                }
+                &:nth-of-type(1){
+                    display: block;
+                }
+            }
+            
+
+        }
+
+        
+
+        & > .btn_wrap {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            @include object(100%,57px);
+            top: 50%;
+            margin-top: -28.5px;
+            z-index: 10;
+            
+            & > .leftbtn {
+                display: block;
+                @include object(30px,57px);
+                @include back_img("../banner/arrow.png");
+                background-position: 0;
+                position: absolute;
+                left: 10%;
+                
+            }
+            & > .rightbtn {
+                display: block;
+                @include object(30px,57px);
+                @include back_img("../banner/arrow.png");
+                background-position: -30px;
+                position: absolute;
+                right: 10%;
+                
+            }
+
+        }
+
+        & > .banner_disc {
+            @include object(100%,auto);
+            text-align: center;
+            position: relative;
+            bottom: 35px;
+            & > li {
+                display: inline-block;
+                margin: 0 3px;
+                @include object(100px,7px);
+                border-radius: 2px;
+                background-color: black;
+                cursor: pointer;
+                &:hover {
+                    transition: 0.3s all ease;
+                    transform: scale(1.01);
+                }
+                &:first-of-type {
+                    background-color: $font_color_red;
+                }
+            }
+        }
+    }
+}
+
+.effect2 {
+    display: none;
+    @include object(100%,534px);
+    position: relative;
+    & > .main_banner {
+        @include object(100%,inherit);
+        position: relative;
+        overflow: hidden;
+        & > .banners {
+            min-width: 1174px;
+            height: inherit;
+            position: relative;
+            & > li {
+                width: 100%;
+                position: relative;
+                height: auto;
+                & > img {
+                    width: 100%;
+                    min-height: 534px;
+                    vertical-align: top;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        & > .banner_disc {
+            @include object(1174px,auto);
+            position: relative;
+            margin: 0 auto;
+            top:-500px;
+            left: 10px;
+            display: flex;
+            flex-direction: column;
+            & > li {
+                @include object(20px,10px);
+                background-color: rgba(0,0,0,0.5);
+                border-radius: 10px;
+                margin-bottom: 10px;
+                cursor: pointer;
+                &:first-of-type {
+                    background-color: #c3222b;
+                }
+            }
+        }
+
+        
+    }
+}

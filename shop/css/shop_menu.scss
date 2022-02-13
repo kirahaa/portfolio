@@ -1,0 +1,84 @@
+@charset "UTF-8";
+@import "./index.scss";
+.menu_wrapper {
+    @include object(100%,auto);
+}
+.m1 {
+    background-color: $font_color_black2;
+    position: relative;
+    @include object(100%,50px);
+}
+.menu_list {
+    position: relative;
+    padding: 0 10px;
+    @include object(1174px,50px);
+    margin: 0 auto;
+    font-size: $font_size_large;
+
+    & > ul {
+        // @include object(auto,50px);
+        & > li {
+            @include object(140px,50px);
+            line-height: 50px;
+            padding-left: 17px;
+            color: white;
+            float: left;
+            cursor: pointer;
+            &:hover {
+                background-color: white;
+                color: $font_color_red;
+                font-weight: bold;
+                transition: all 0.5s ease;
+            }
+        }
+    }
+    & > label {
+        display: block;
+        @include lobject(140px,50px);
+        background-color: #c3222b;
+        color: white;
+        float: right;
+        font-size: $font_size_medium;
+        cursor: pointer;
+        &:hover {
+            background-color: white;
+            color: $font_color_red;
+            font-weight: bold;
+            transition: all 0.5s ease;
+        }
+    }
+}
+.drop_menu {
+    display: none;    //잠깐 없애깅!
+    position: absolute;
+    top: 100%;
+    border-bottom: 1px solid #ccc;
+    @include object(100%,260px);
+    margin: 0 auto;
+    background-color: #fff;
+    z-index: 50;
+    &> span {
+        display: flex;
+        @include object(1174px,auto);
+        margin: 0 auto;
+        padding: 10px 0 0 10px;
+        & > ul {
+            @include object(140px,auto);
+            border-right: 1px solid $border_color;
+            padding-left: 20px;
+            & > li {
+                font-size: $font_size_small;
+                @include lobject(auto,30px);
+                text-align: left;
+                cursor: pointer;
+                &:hover {
+                    font-weight: bold;
+                    color: $font_color_red;
+                }
+            }
+            &:last-of-type {
+                border: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,223 @@
+@charset "UTF-8";
+@mixin base {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@mixin object($w,$h) {
+    width: $w;
+    height: $h;
+}
+@mixin lobject($w,$h) {
+    width: $w;
+    height: $h;
+    line-height: $h;
+}
+@mixin list_base {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+* {
+   box-sizing: border-box;
+}
+body {
+    @include base();
+}
+ul, ol {
+    @include list_base();
+}
+.banner_listNo {
+    @include object(100%, 40px);
+    background-color: rgb(242, 242, 242);
+    margin-bottom: 60px;
+    & > label {
+        display: block;
+        @include lobject(1200px, 40px);
+        margin: 0 auto;
+        & > span {
+            font-size: 110%;
+        }
+    }
+}
+.banner_top{
+    @include lobject(1200px, 50px);
+    margin: 0 auto;
+    margin-bottom: 10px;
+    & > ul{
+        & > li {
+            @include lobject(120px, 50px);
+            background-color: #f2f2f2;
+            float: left;
+            text-align: center;
+            &:nth-child(4){
+                & > input {
+                    @include object(80px, 35px);
+                    border-radius: 3px;
+                    background-color: #a6a6a6;
+                    color: white;
+                    border: none;
+                }
+            }
+        }
+        
+    }
+}
+.banner_table {
+    @include object(1200px, auto);
+    text-align: center;
+    background-color:  rgb(242, 242, 242);
+    border: none;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    border-top: 2px solid rgb(100,100,100);
+    & > thead {
+        height: 35px;
+        & > tr {
+            & > td{
+                border-bottom: 1px solid rgb(166, 166, 166);
+                &:first-of-type{
+                    @include object(50px, auto);
+                }
+                &:last-of-type{
+                    @include object(90px, auto);
+                }
+            }
+            
+        }
+    }
+    & > tbody {
+        background-color: white;
+        & > tr {
+            height: 60px !important;
+            & > td {
+                border-bottom: 1px solid rgb(166, 166, 166);
+                & > select {
+                    border: 1px solid #ccc ;
+                    @include object(50px, 25px);
+                }
+                &:nth-of-type(2){
+                    width: 200px;
+                }
+                & > img {
+                    margin: 5px 0;
+                    width: 150px;
+                }
+                &:nth-of-type(3){
+                    width: 250px !important;
+                    & > input {
+                        text-indent: 5px;
+                        @include object(230px, 40px);
+                        border: 1px solid #ccc;
+                    }
+                }
+                &:last-of-type {
+                    & > a {
+                        display: inline-block;
+                        @include object(50px, 25px);
+                        border: 1px solid #a6a6a6;
+                        border-radius: 5px;
+                        background-color: #eee;
+                        line-height: 25px;
+                        &:hover {
+                            border: 1px solid rgb(100,100,100);
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+    & > tfoot {
+        height: 35px;
+        border: 1px solid rgb(166, 166, 166);
+    }
+    & a { 
+        color: black;
+    }
+}
+
+.product_page {
+    @include lobject(1200px, 30px);
+    margin: 0 auto;
+    text-align: center;
+    & > ul {
+        display: inline;
+        & > li {
+            @include lobject(30px, 30px);
+            border-radius: 5px;
+            border: 1px solid rgb(166, 166, 166);
+            color: black;
+            display: inline-block;
+            margin: 0 5px;
+            cursor: pointer;
+            &:hover {
+                border: 1px solid rgb(100,100,100);
+            }
+        }
+    }
+}
+
+.banner_foot {
+    @include lobject(1200px, 50px);
+    margin: 0 auto;
+    text-align: right;
+    & > input {
+        display: inline-block;
+        @include object(100px, 35px);
+        border-radius: 3px;
+        background-color: #a6a6a6;
+        color: white;
+        font-size: 90%;
+        border: none;
+        &:last-of-type {
+            background-color: #7f859c;
+        }
+    }
+}
+
+
+//////////////////////////////////////////////
+.bannernew_table{
+    @include object(1200px, auto);
+    background-color:  rgb(242, 242, 242);
+    border: none;
+    margin-bottom: 10px;
+    margin: 0 auto;
+    &  tr {
+        text-indent: 10px;
+        height: 35px;
+        & > td {
+            border: 1px solid rgb(166, 166, 166);
+            &:first-of-type{
+                @include object(120px, auto);
+            }
+            &:nth-of-type(2) {
+                & > input {
+                    @include object(300px, 30px);
+                    border: 1px solid #ccc;
+                }
+            }
+        }
+    }
+
+}
+.bannernew_foot {
+    @include lobject(1200px, 50px);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & > input {
+        display: inline-block;
+        @include object(100px, 30px);
+        border-radius: 3px;
+        background-color: #a6a6a6;
+        color: white;
+        font-size: 90%;
+        border: none;
+        &:last-of-type {
+            background-color: #7f859c;
+        }
+    }
+}

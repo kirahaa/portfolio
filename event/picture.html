@@ -1,0 +1,136 @@
+<?php
+    $v = date("YmdHis");
+?>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./picture.css?v=<?php echo $v?>">
+    <title>틀린 그림 찾기</title>
+    <script src="../js/jquery.js"></script>
+    <script src="//d1p7wdleee1q2z.cloudfront.net/post/search.min.js"></script>
+    <script src="./picture.js?v=<?php echo $v?>"></script>
+</head>
+<body>
+<aside>
+
+    <div class="title_box"><h1>2021 Sale Coupon Event</h1></div>
+    <div class="box">
+        <div class="sbox">
+            <div class="dark" id="dark">
+                <label class="start_btn" id="start">S T A R T</label>
+            </div>
+            <ul class="picture">
+                <li></li>
+                <li id="ca_aw"></li>
+            </ul>
+            <label class="count">
+                <img src="./game/no_5.png" alt="" id="no">
+            </label>
+            <label>
+            <span class="aw"><img src=""></span>
+            <span class="aw"><img src=""></span>
+            <span class="aw"><img src=""></span>
+            <span class="aw"><img src=""></span>
+            <span class="aw"><img src=""></span>
+            </label>
+        </div>
+        <div class="inform_text">
+            <span>※ 2021년 9월 1일 ~ 30일까지 이벤트가 진행 됩니다.</span>
+            <span>※ 숨은그림찾기 게임은 하루에 한번만 진행을 할 수 있습니다. 단, 회원에 한해서만 참여할 수 있습니다.</span>
+            <span>※ 총 5번의 기회가 있으며, 틀린 그림은 총 5곳 입니다.</span>
+            <span>※ 5번 모두 틀릴 경우 게임은 종료 됩니다.</span>
+            <span>※ 틀린그림 총 5곳을 모두 찾으신 고객님은 자동으로 입력 사항이 나오며, 해당 정보 입력시 소정의 상품을 발송 합니다.</span>
+        </div>
+    </div>
+
+    <form name="event_f" method="POST" action="../shop/eventok.php" enctype="application/x-www-form-urlencoded">
+    <input type="hidden" name="e_id" value="hong"><!--임의 아이디-->
+    <input type="hidden" name="e_tel" id="e_tel" value=""><!--최대 11자리-->
+    <div class="event_agree" id="event_agree">
+        <span class="event_title">이벤트 경품 발송을 위해 개인정보 수집 방침에 동의해 주세요</span>
+        <textarea name="" id="load_text" class="texta" style="resize: none;" readonly></textarea>
+        <label class="agree_ck"><input type="checkbox" name="e_agree" value="Y"> 개인정보 수집 및 이용 약관에 모두 동의합니다.</label>
+        <ul class="event_form">
+            <li>
+                <span>고객명</span>
+                <span><input type="text" name="e_name"></span>
+                <span>휴대폰번호</span>
+                <span><input type="tel" id="tel0" maxlength="3"> - <input type="tel" id="tel1" maxlength="4"> - <input type="tel" id="tel2" maxlength="4"></span>
+            </li>
+            <li>
+                <div>배송지 주소</div>
+                <div>
+                    <span><input type="text" name="e_addr" maxlength="5" readonly class="postcodify_postcode5"><input type="button" value="주소찾기" id="addr_btn"></span>
+                    <span><input type="text" name="e_road" readonly class="postcodify_address"></span>
+                    <span><input type="text" name="e_dtc"></span>
+                </div>
+            </li>
+            <li>
+                <input type="button" value="이벤트 참여" id="join_btn">
+            </li>
+        </ul>
+    </div>
+    </form>
+</aside>
+
+</body>
+<script>
+    /* 이용약관 불러오기 */
+    function text_load(){
+        let a = new XMLHttpRequest();
+        a.open("GET","./event_agree.txt",true);
+        a.onreadystatechange = function(){
+            if(a.readyState===XMLHttpRequest.DONE && a.status===200){
+                let b = a.response;
+                document.getElementById("load_text").innerHTML = b;
+            }
+        }
+        a.send();
+    }
+    text_load();
+
+    /* 입력 form */
+    document.getElementById("join_btn").addEventListener("click",event_join);
+    function event_join(){
+        let t0 = document.getElementById("tel0").value;
+        let t1 = document.getElementById("tel1").value;
+        let t2 = document.getElementById("tel2").value;
+        let tel = t0 + "" + t1 + "" + t2;
+        if(event_f.e_agree.checked==false){
+            alert("동의항목에 체크해주세요");
+            $(".agree_ck").css("color","red");
+        }
+        else if(!event_f.e_name.value){
+            alert("고객명을 입력해주세요");
+        }
+        else if(!t0||!t1||!t2){
+            alert("전화번호를 입력해주세요")
+        }
+        else if(isNaN(Number(t0))==true||isNaN(Number(t1))==true||isNaN(Number(t2))==true){
+            alert("숫자만 입력해주세요");
+        }
+        else if(t0!="010" && t0!="011" && t0!="017"){
+            alert("올바른 전화번호가 아닙니다.")
+        }
+        else if(!event_f.e_addr.value||!event_f.e_dtc.value){
+            alert("주소를 모두 입력해주세요");
+        }
+        else{
+            let tel_length = tel.length;
+            console.log(tel_length);
+            if(tel_length<10){
+                alert("정상적인 휴대폰 번호가 아닙니다.");
+            }
+            else {
+                document.getElementById("e_tel").value = tel;
+                event_f.submit();
+            }
+        }
+        
+    }
+</script>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한우사랑</title>
+    <style>
+        body {
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+        }
+        .popimg {
+            width: 100vw;
+            height: 100vh;
+        }
+        .popimg > img {
+            width: 100%;
+            height: 100%;
+        }
+        .popup {
+            width: 100vw;
+            text-align: right;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="popimg">
+        <img src="./image/event_popup1.png" alt="">
+    </div>
+    <div class="popup">
+        <label for="popup"><input type="checkbox" id="popup">오늘하루 그만보기</label>
+    </div>
+    
+</body>
+<script>
+    function closes(){
+        let ck = document.getElementById("popup").checked;
+        if(ck==true){
+            cookie_set("popups","N",1);
+        }
+    }
+    function cookie_set(data,value,day){
+        let days = new Date();
+        days.setTime(days.getTime()+(day*24*60*60*1000));
+        document.cookie = data + "=" + escape(value) + "; expires=" + days.toGMTString();
+        self.close();
+    }
+    document.getElementById("popup").addEventListener("click",closes);
+</script>
+</html>

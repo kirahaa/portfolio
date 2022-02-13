@@ -1,0 +1,252 @@
+@charset "UTF-8";
+
+.member__admin {
+  width: 100%;
+  height: auto;
+  min-height: 600px;
+}
+
+.member__tableNone {
+  display: none;
+}
+
+/**** 전체목록 ****/
+.member__listNo {
+  width: 100%;
+  height: 40px;
+  background-color: rgb(242, 242, 242);
+  font-size: 110%;
+  font-weight: 400;
+}
+.member__listNo > label {
+  display: block;
+  width: 1200px;
+  height: inherit;
+  line-height: 40px;
+  margin: 0 auto;
+}
+.member__listTotal {
+  display: inline-block;
+  width: auto;
+  font-weight: 400;
+}
+
+
+/**** 회원아이디 검색 ****/
+.member__idSearch {
+  width: 1200px;
+  height: auto;
+  margin: 0 auto;
+  padding: 60px 0 15px 0px;
+}
+.member__idSearch > input,
+.member__idSearch > select {
+  height: 35px;
+  vertical-align: top;
+  border: 1px solid #ccc;
+}
+.member__idSearch > input:nth-of-type(1) {
+  width: 300px;
+  height: 35px;
+  border:1px solid #ccc;
+  font-size: 100%;
+  text-indent: 10px;
+}
+
+
+/**** 테이블 상단 : 메모 ****/
+.member__memo {
+  width: 1200px;
+  height: 40px;
+  line-height: 40px;
+  margin: 0 auto;
+  font-size: 100%;
+  text-indent: 20px;
+  background-color: rgba(112, 140, 132, 0.15);
+}
+
+
+/**** 테이블 ****/
+.member__table {
+  width: 1200px;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+  border-top : 2px solid #646464;
+  margin-bottom: 10px;
+}
+.member__table tr {
+  height: 35px;
+  font-size: 90%;
+}
+
+.member__table th {
+  font-size: 115%;
+  font-weight: 400;
+  background-color : #f2f2f2;
+  border-right: 1px solid #ccc;
+}
+
+.member__table tr:nth-child(2) th {
+  line-height: 16px;
+  padding: 5px;
+}
+
+/* 테이블 col 비율 */
+.member__table tr:first-child th:nth-of-type(1) {
+  width: 3%;
+}
+.member__table tr:first-child th:nth-of-type(2),
+.member__table tr:first-child th:nth-of-type(3) {
+  width: 12%;
+}
+.member__table tr:first-child th:nth-of-type(4) {
+  width: 28%;
+}
+.member__table tr:first-child th:nth-of-type(5) {
+  width: 10%;
+}
+.member__table tr:first-child th:nth-of-type(6) {
+  width: 12%;
+}
+.member__table tr:first-child th:nth-of-type(7) {
+  width: 15%;
+}
+
+/* 테이블 외곽선 */
+.member__table tr:first-child th:nth-of-type(9) {
+  border: none;
+}
+.member__table tr:nth-child(2) th {
+  border-top: 1px solid #ccc;
+}
+
+
+/* 테이블 text 셋팅 */
+.member__name,
+.member__nick {
+  text-align: left;
+  text-indent: 10px;
+}
+.member__mailVerify {
+  color: red;
+}
+.member__tableList > tr:first-child > td:nth-child(4) > label:first-child {
+  margin-right: 30px;
+}
+.member__tableList tr {
+  border-bottom: 1px solid #ccc;
+}
+.member__tableList tr > td:nth-child(9) {
+  border: none;
+}
+.member__tableList td{
+  border-right: 1px solid #ccc;
+}
+.member__tableNone tr {
+  height: 50px;
+  border-bottom: 1px solid#ccc;
+}
+
+
+
+/**** 테이블 리스트 없음 ****/
+/* .member__tableList {
+  display: none;
+} */
+/* .member__tableNone {
+  display: none;
+} */
+
+
+/**** 페이지 번호 ****/
+.page_box {
+    display: block;
+    width: auto;
+    height: 30px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.member__page {
+    display: inline-block;
+    width: auto;
+    height: 30px;
+    margin: 0 auto;
+}
+.member__page > li {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 85%;
+  border: 1px solid rgb(166, 166, 166);
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 0 3px;
+}
+
+.member__page > li:hover {
+  border: 1px solid rgb(100,100,100);
+}
+.page_btn {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgb(166, 166, 166);
+    text-align: center;
+    line-height: 30px;
+    margin: 0 3px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.page_btn:hover {
+    border: 1px solid rgb(100,100,100);
+}
+
+
+/**** 버튼 ****/
+.member__idSearchBtn {
+  width: 80px;
+  height: 35px;
+  border-radius: 3px;
+  background-color: #a6a6a6;
+  color: white;
+  font-size: 100%;
+  border: none;
+  vertical-align: top;
+}
+.member__addMemberBtn,
+.member__tableBtns {
+  display: block;
+  width: 1200px;
+  height: auto;
+  margin: 0 auto;
+  text-align: right;
+}
+.member__addMemberBtn > button,
+.member__tableBtns > button {
+  width: 100px;
+  height: 35px;
+  border-radius: 3px;
+  background-color: #7f859c;
+  color: white;
+  font-size: 100%;
+  border: none;  
+}
+.member__idSearchBtn:hover,
+.member__addMemberBtn > button:hover,
+.member__tableBtns > button:hover {
+  border-radius: 3px;
+  box-shadow: 0 3px 5px 0 rgba(100, 100, 100, 0.35);
+}
+.member__addMemberBtn {
+  padding: 15px 0 15px 0;
+}
+.member__tableBtns {
+  padding: 5px 0 15px 0;
+}
+

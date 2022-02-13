@@ -1,0 +1,188 @@
+<meta charset="UTF-8" />
+
+
+<article class="info_box">
+  <span class="info_title">회원리스트</span>
+  <ul class="tsbox">
+    <li onclick="fontclass('1')"><img src="../image/ts01.gif" alt="../image/ts01.gif" title="보통"></li>
+    <li onclick="fontclass('2')"><img src="../image/ts02.gif" alt="../image/ts02.gif" title="크게"></li>
+    <li onclick="fontclass('3')"><img src="../image/ts03.gif" alt="../image/ts03.gif" title="더 크게"></li>
+  </ul>
+</article>
+
+<!-- 전체목록 및 회원 수 -->
+<article class="member__admin">
+  <div class="member__listNo">
+    <label>
+      <span class="member__listTotal">전체 목록 |</span>
+      총 회원수 <span id="total_ea"></span>명 중,
+      차단 <span>0</span>명,
+      탈퇴 <span>0</span>명
+    </label>
+  </div>
+
+  <!-- 회원아이디 검색  -->
+  <form id="sform" name="sform" method="GET" action="admin_member.html" enctype="application/x-www-form-urlencoded"
+    onsubmit="return search()">
+    <div class="member__idSearch">
+      <select name="search_part" id="search_part">
+        <option value="" selected>항목선택</option>
+        <option value="sid">아이디</option>
+        <option value="sname">이름</option>
+      </select>
+      <input type="text" name="stext" id="stext" placeholder="검색할 단어를 입력하세요" />
+      <button type="submit" class="member__idSearchBtn">검색</button>
+      <button type="button" class="member__idSearchBtn" onclick="search_all()">전체목록</button>
+    </div>
+  </form>
+  <!-- 메모 -->
+  <div class="member__memo">
+    회원자료 삭제시 다른 회원이 기존 회원 아이디를 사용하지 못하도록 회원 아이디, 이름, 닉네임은 삭제하지 않고 영구 보관합니다.
+  </div>
+
+  <!-- 회원 추가버튼  -->
+  <span class="member__addMemberBtn">
+    <button type="button" id="add_member">회원 추가</button>
+  </span>
+
+<form name="mfrm" method="POST" enctype="application/x-www-form-urlencoded">
+  <table class="member__table">
+    <!-- 회원 리스트 테이블 제목 -->
+    <thead>
+      <tr>
+        <th rowspan="2">
+          <input type="checkbox" id="all_check" onclick="all_list()"/>
+        </th>
+        <th rowspan="2">아이디</th>
+        <th>이름</th>
+        <th colspan="6">본인확인</th>
+        <th>휴대폰</th>
+        <th>상태/권한</th>
+        <th>최종접속</th>
+        <th rowspan="2">접근그룹</th>
+      </tr>
+      <tr>
+        <th>닉네임</th>
+        <th>
+          메일<br>
+          인증
+        </th>
+        <th>
+          정보<br>
+          공개
+        </th>
+        <th>
+          메일<br>
+          수신
+        </th>
+        <th>
+          SMS<br>
+          수신
+        </th>
+        <th>
+          성인<br>
+          인증
+        </th>
+        <th>
+          접근<br>
+          차단
+        </th>
+        <th>전화번호</th>
+        <th>포인트</th>
+        <th>가입일</th>
+      </tr>
+    </thead>
+
+    <!-- 회원 리스트 -->
+    <tbody class="member__tableList" id="member_tableList">
+
+    </tbody>
+
+    <!-- 가입 회원 없음 -->
+    <tfoot class="member__tableNone" id="member_tableNone" >
+      <tr>
+        <td colspan="15">가입된 회원이 없습니다.</td>
+      </tr>
+    </tfoot>
+    <tfoot class="member__tableNone" id="search_tableNone" >
+      <tr>
+        <td colspan="15">해당 회원이 없습니다.</td>
+      </tr>
+    </tfoot>
+  </table>
+</form>
+  
+
+  <!-- 페이지 번호 -->
+  <span class="page_box">
+    <!-- <label class="page_btn" id="front_page"> << </label> -->
+    <!-- <label class="page_btn" id="prev_page"> < </label> -->
+    <label>
+      <ul class="member__page" id="member_page">
+        
+      </ul>
+    </label>
+    <!-- <label class="page_btn" id="next_page"> > </label> -->
+    <!-- <label class="page_btn" id="back_page"> >> </label> -->
+  </span>
+
+  <!-- 테이블 하단 버튼 -->
+  <span id="mem_btn" class="member__tableBtns">
+    <button type="button" onclick="modify(1)">선택수정</button>
+    <button type="button" onclick="modify(2)">선택삭제</button>
+    <button type="button" onclick="modify(3)">완전삭제</button>
+  </span>
+</article>
+
+<script>
+  filters();
+  
+  function modify(part){
+    let ck_len;
+    var ck_val;
+    ck_len= document.querySelectorAll('.sub_check').length;
+    ck_val=0;
+    for(let i=0;i<ck_len;i++){
+      if(document.getElementsByName("midx["+i+"]")[0].checked==true){
+        ck_val++;
+      }
+    }
+      if(part==1){
+        if(confirm("해당 데이터를 수정하시겠습니까?")){
+          /* 단 한개라도 체크가 없을 경우 해당 backend쪽으로 넘길경우 올바르지 않는 값이 나오게됨. 체크 확인하는 코드 작성하시오! */
+          
+            if(ck_val==0){
+              alert("수정할 항목을 체크해주세요");
+            }
+            else{
+              mfrm.action="member_modify.php";
+              mfrm.submit();
+            }
+            
+        };
+      }
+      else if(part==2){
+        if(confirm("해당 데이터는 삭제시 복구 되지 않습니다.\n삭제하시겠습니까?")){
+
+          for(let i=0;i<ck_len;i++){
+            if(document.getElementsByName("midx["+i+"]")[0].checked==true){
+              ck_val++;
+            }
+          }
+          if(ck_val==0){
+              alert("삭제할 항목을 체크해주세요");
+          }
+          else{
+            mfrm.action="member_del.php";
+            mfrm.submit();
+          }
+        };
+      }
+      else if(part==3){
+        if(confirm("해당 데이터 전체를 삭제하시겠습니까?")){
+          alert("최고 관리자 외에는 삭제를 할 수 없습니다.");
+        };
+      }
+  }
+
+</script>

@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  font-family: 'Noto Sans KR', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.shopn_wrap {
+  padding: 50px 0;
+  width: 1200px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.shopn_wrap > h3 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.shopn_wrap > table {
+  width: 100%;
+  height: auto;
+  border: none;
+  border-top: 2px solid #646464;
+  border-collapse: collapse;
+  text-indent: 10px;
+  font-size: 14px;
+}
+
+.shopn_wrap > table > tbody > tr > td {
+  border-bottom: 1px solid #ddd;
+}
+
+.shopn_wrap > table > tbody > tr > td:first-of-type {
+  width: 150px;
+  height: 40px;
+  background-color: #f6f7fb;
+}
+
+.shopn_wrap > table > tbody > tr:nth-of-type(3) > td:nth-of-type(2) {
+  width: 150px;
+  height: auto;
+}
+
+.shopn_wrap > table > tbody > tr:nth-of-type(3) > td:nth-of-type(3) {
+  width: 150px;
+  height: auto;
+  background-color: #f6f7fb;
+}
+
+.n_contents {
+  width: 100%;
+  height: 400px;
+  overflow-y: scroll;
+  padding: 15px 12px;
+  border-bottom: 1px solid #ddd;
+  color: #6a6969;
+  font-size: 15px;
+}
+
+.n_btn_wrap {
+  padding: 15px 0;
+}
+
+.n_btn_wrap > button {
+  width: 120px;
+  height: 35px;
+  border: none;
+  background-color: #303947;
+  color: white;
+  float: right;
+}
+
+/* notice_list */
+.nlist_wrap {
+  padding: 50px 0;
+  width: 1200px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.nlist_wrap > h3 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.nlist_wrap > table {
+  margin: 0 auto;
+  width: 1020px;
+  height: auto;
+  border: none;
+  border-top: 2px solid #646464;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 14px;
+}
+
+.nlist_wrap > table > thead {
+  background-color: #f6f7fb;
+}
+
+.nlist_wrap > table > thead > tr {
+  height: 40px;
+}
+
+.nlist_wrap > table > thead > tr > td:first-of-type {
+  width: 80px;
+}
+
+.nlist_wrap > table > thead > tr > td:nth-of-type(2) {
+  width: 600px;
+}
+
+.nlist_wrap > table > thead > tr > td:last-of-type {
+  width: 80px;
+}
+
+.nlist_wrap > table > tbody > tr {
+  height: 40px;
+  cursor: pointer;
+}
+
+.nlist_wrap > table > tbody > tr > td:nth-of-type(2) {
+  text-align: left;
+  text-indent: 10px;
+}
+
+.notice_page {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.notice_page > label {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  line-height: 30px;
+  text-align: center;
+  cursor: pointer;
+  margin: 0 5px;
+}
+/*# sourceMappingURL=shop_notice.css.map */

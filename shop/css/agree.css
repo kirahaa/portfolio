@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  font-family: 'Noto Sans KR', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.agree_wrap {
+  width: 800px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.agree_wrap > h2 {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.agree_main h3 {
+  border-bottom: 1px solid #eee;
+  line-height: 30px;
+}
+
+.agree_main > ul {
+  padding: 20px 0;
+  width: inherit;
+  height: auto;
+  color: #6a6969;
+}
+
+.agree_main > ul > li {
+  width: inherit;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.agree_main > ul > li:last-of-type {
+  width: inherit;
+  height: auto;
+}
+
+.agree_main > ul > li > .agree_title {
+  font-weight: bold;
+}
+
+.agree_main > ul > li > .textarea {
+  width: 100%;
+  height: 150px;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-top: 2px solid #646464;
+  overflow-y: scroll;
+  font-family: 'Noto Sans KR', sans-serif;
+  line-height: 18px;
+  color: #6a6969;
+  font-size: 14px;
+}
+
+.agree_main > ul > li .ared {
+  color: #be0000;
+}
+
+.agree_btn {
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.agree_btn > button {
+  width: 150px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background-color: #464646;
+  color: white;
+}
+
+.agree_btn > button:hover {
+  background-color: #be0000;
+}
+/*# sourceMappingURL=agree.css.map */

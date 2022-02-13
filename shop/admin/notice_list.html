@@ -1,0 +1,68 @@
+<meta charset="UTF-8">
+<article class="info_box">
+    <span class="info_title">공지사항 리스트</span>
+    <ul class="tsbox">
+      <li onclick="fontclass('1')"><img src="../image/ts01.gif" alt="../image/ts01.gif" title="보통"></li>
+      <li onclick="fontclass('2')"><img src="../image/ts02.gif" alt="../image/ts02.gif" title="크게"></li>
+      <li onclick="fontclass('3')"><img src="../image/ts03.gif" alt="../image/ts03.gif" title="더 크게"></li>
+    </ul>
+</article>
+<!-- 제작 -->
+<div id="notice"> <!-- Vue ID -->
+{{getAjax}}
+<article>
+<div class="faq_wrapper">
+    <label>
+      <span>전체 목록 | 생성된 게시판 개수 <span>{{totalea}}</span>개</span>
+    </label>
+</div>
+</article>
+<form name="fsearch" id="fsearch" @submit.prevent="notice_search">
+    <div class="faq_search">
+      <input type="text" name="pnm" v-model="stext" placeholder="검색할 단어를 입력하세요" />
+      <button type="submit">검색</button>
+      <button type="button" @click="all_list">전체목록</button>
+    </div>
+</form>
+
+<form name="nl_frm" id="nl_frm" method="POST" enctype="application/x-www-form-urlencoded">
+<table class="notice_table">
+    <thead>
+        <tr>
+            <td><input type="checkbox" id="ckall" @click="list_check"></td>
+            <td>번호</td>
+            <td>제목</td>
+            <td>글쓴이</td>
+            <td>날짜</td>
+            <td>조회</td>
+        </tr>
+    </thead>
+    <tbody class="answercontrol" v-if="dataexist==1" v-for="i,index in ndata">
+        <tr>
+            <td><input type="checkbox" name="notice_fidx[]" class="cks" v-bind:value="i.sidx" @click="checks(index)"></td>
+            <td>{{ea-index}}</td>
+            <td @click="go_modify(i.sidx)"><a>{{i.subject}}</a></td>
+            <td>{{i.id}}</td>
+            <td>{{i.windate.substr(0,10)}}</td>
+            <td>{{i.wcount}}</td>
+        </tr>
+    </tbody>
+    <tfoot v-if="dataexist==2">
+        <tr>
+            <td colspan="6">등록된 게시글이 없습니다.</td>
+        </tr>
+    </tfoot>
+</table>
+</form>
+
+<div class="notice_page" >
+    <ul>
+      <li v-for="i in paging" @click="paging_click(i)">{{i}}</li>
+    </ul>
+  </div>
+<div class="notice_foot"> 
+    <input type="button" value="게시물 삭제" @click="delete_notice" id="notice_del"> 
+    <input type="button" value="게시물 등록" @click="go_noticewrite" > 
+</div>
+
+</div>

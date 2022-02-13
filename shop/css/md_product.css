@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  font-family: 'Noto Sans KR', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.md_Wrap {
+  width: 1200px;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+}
+
+.md_title {
+  display: block;
+  width: inherit;
+  height: auto;
+  text-align: center;
+  margin: 50px 0;
+}
+
+.md_btn1 {
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  margin-top: -20px;
+  left: -30px;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.md_btn1:hover {
+  opacity: 1;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.md_btn2 {
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  margin-top: -20px;
+  right: -30px;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.md_btn2:hover {
+  opacity: 1;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.md_prd {
+  width: inherit;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.md_prd > span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-left: 30px;
+  position: relative;
+}
+
+.md_prd > span > ul {
+  width: 204px;
+  height: auto;
+  margin-right: 30px;
+  margin-bottom: 20px;
+}
+
+.md_prd > span > ul > li {
+  width: 204px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.md_prd > span > ul > li:first-of-type {
+  width: 204px;
+  height: 204px;
+}
+
+.md_prd > span > ul > li:first-of-type > label {
+  display: block;
+  width: 202px;
+  height: 202px;
+  margin: 0 auto;
+  border-radius: 202px;
+  overflow: hidden;
+  position: relative;
+}
+
+.md_prd > span > ul > li:first-of-type > label > img {
+  display: block;
+  cursor: pointer;
+  margin: 0 auto;
+  position: relative;
+  top: -30px;
+}
+
+.md_prd > span > ul > li:first-of-type > label > img:hover {
+  -webkit-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.md_prd > span > ul > li:nth-of-type(2) {
+  width: 202px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.md_prd > span > ul > li:nth-of-type(3) {
+  color: #6a6969;
+  font-size: 12px;
+}
+
+.md_prd > span > ul > li:nth-of-type(4) {
+  color: #be0000;
+  font-size: 14px;
+}
+/*# sourceMappingURL=md_product.css.map */

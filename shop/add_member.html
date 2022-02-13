@@ -1,0 +1,253 @@
+<meta charset="UTF-8">
+<script src="../js/jquery.js"></script>
+<link rel="stylesheet" type="text/css" href="./add_member.css?v=<?=$v?>">
+<script src="//d1p7wdleee1q2z.cloudfront.net/post/search.min.js"></script>
+<script src="https://kit.fontawesome.com/dedef9bb55.js" crossorigin="anonymous"></script>
+<script>
+    $(function(){
+        $("#add_search").postcodifyPopUp();
+    })
+
+    function join(){
+        let same_pass = document.getElementById("samepass").value;
+        /* 아이디 검토 파트 */
+
+        // let matchs = /^(?=.*[~!@#$%^&*+-=`.,?"])/;
+        // let idea = mfrm.M_id.value.length;
+        // console.log(matchs.test(mfrm.M_id.value));
+        // if(matchs.test(mfrm.M_id.value)==true){
+        //     alert("아이디는 _외에 다른 특수문자는 사용하실 수 없습니다.");
+        // }
+        // else if(idea<4){
+        //     alert("아이디는 최소 3자이상 입력하셔야 합니다.");
+        // }
+        /* 닉네임 검토 파트 */
+        let matchss = /^(?=.*[a-zA-Z가-힣])/g;
+        console.log(matchss.test(mfrm.M_nick.value));
+
+        if(!mfrm.M_id.value){
+            alert("아이디를 입력해주세요");
+            mfrm.M_id.focus();
+        }
+        else if(!mfrm.M_pass.value){
+            alert("비밀번호를 입력해주세요");
+            mfrm.M_pass.focus();
+        }
+        else if(!same_pass){
+            alert("비밀번호를 확인해주세요");
+        }
+        else{
+            if(mfrm.M_id.value.length<4){
+                alert("아이디는 최소 3자 이상 입력하세요");
+            }
+            else{
+                // let matchs = /^(?=.*[~!@#$%^&*+-=`.,?"])/;
+                let matchs = /^[A-Za-z0-9_+]*$/;
+                if(matchs.test(mfrm.M_id.value)!=true){
+                    alert("아이디는 _외에 다른 특수문자는 사용하실 수 없습니다.");
+                    mfrm.M_id.focus();
+                }
+                else{
+                    if(same_pass != mfrm.M_pass.value){
+                    alert("동일한 비밀번호를 입력해주세요");
+                    mfrm.M_pass.focus();
+                    }
+                    else{
+                        join2();
+                    }
+                }
+
+            }
+        }
+    }
+        function join2(){
+            if(!mfrm.M_name.value){
+                alert("고객명을 입력해주세요");
+                mfrm.M_name.focus();
+            }
+            else if(!mfrm.M_nick.value){
+                alert("닉네임을 입력해주세요");
+                mfrm.M_nick.focus();
+            }
+            else if(!mfrm.M_email.value){
+                alert("이메일을 입력해주세요");
+                mfrm.M_email.focus();
+            }
+            else if(!mfrm.M_tel.value){
+                alert("휴대폰번호를 입력해주세요");
+                mfrm.M_tel.focus();
+            }
+            else if(!mfrm.M_post.value){
+                alert("주소를 입력해주세요");
+                mfrm.M_post.focus();
+            }
+            else if(!mfrm.M_addr.value){
+                alert("상세 주소를 입력해주세요");
+                mfrm.M_addr.focus();
+            }
+            else if(!mfrm.M_security.value){
+                alert("보안코드를 입력해주세요");
+                mfrm.M_security.focus();
+            }
+            else if(mfrm.M_security.value.length!=6){
+                alert("올바른 등록번호를 입력해주세요(6자리)");
+            }
+            else{
+                join3();
+            }
+        }    
+        function join3(){
+            var regExp = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+
+            if(mfrm.M_id.value.match(/[ㄱ-ㅎ|ㅏ-ㅣ|]/g)!=null){
+                alert("올바른 아이디를 입력해주세요");
+                mfrm.M_id.focus();
+            }
+            else if(mfrm.M_id.value.length<3){
+                alert("최소 3자이상 입력해주세요");
+                mfrm.M_id.focus();
+            }
+            else if(mfrm.M_nick.value.length<2){
+                alert("올바른 닉네임을 입력해주세요");
+                mfrm.M_nick.focus();
+            }
+            else if(isNaN(Number(mfrm.M_tel.value))==true){
+                console.log(isNaN(mfrm.M_tel.value));
+                alert("올바른 전화번호를 입력해주세요");
+                mfrm.M_tel.focus();
+            }
+            else if(mfrm.M_email.value.match(/@/g)==null){
+                alert("올바른 이메일을 입력해주세요");
+                mfrm.M_email.focus();
+            }
+            else if(mfrm.M_email.value.match(regExp)==null){
+                alert("올바른 이메일을 입력해주세요");
+                mfrm.M_email.focus();
+            }
+            else{
+                mfrm.action="add_memberok.php";
+                mfrm.submit();
+            }
+
+        }
+
+
+</script>
+
+<form name="mfrm" id="mfrm" method="POST" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="terms" value="<?php echo $agree1?>">
+<input type="hidden" name="mail_terms" value="<?php echo $agree2?>">
+<input type="hidden" name="M_group" value="N"> <!--N,S,G,V-->
+<input type="hidden" name="M_level" value="3"><!-- 1:간편회원가입 2:직접회원가입 3:관리자등록-->
+<h2>회원가입</h2>
+<section class="add_box">
+    <article>
+        <div class="add_title"><i class="fas fa-star"></i> 사이트 이용정보 입력</div>
+        <table>
+            <tbody>
+                <tr>
+                    <td>아이디*</td>
+                    <td><input type="text" name="M_id"><br>
+                        영문자, 숫자, _만 입력가능. 최소 3자이상 입력하세요.
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>비밀번호*</td>
+                    <td><input type="password" name="M_pass"></td>
+                    <td>비밀번호 확인*</td>
+                    <td><input type="password" id="samepass"></td>
+                </tr>
+            </tbody>
+        </table>
+    </article>
+    <article>
+        <div class="add_title"><i class="fas fa-user"></i> 개인정보 입력</div>
+        <table>
+            <tbody>
+                <tr>
+                    <td>이름*</td>
+                    <td><input type="text" name="M_name"></td>
+                </tr>
+                <tr>
+                    <td>닉네임*</td>
+                    <td><input type="text" name="M_nick"><br>
+                        공백없이 한글,영문,숫자만 입력 가능 (한글2자, 영문4자 이상) 닉네임을 바꾸시면 앞으로 60일 이내에는 변경할 수 없습니다.
+                    </td>
+                </tr>
+                <tr>
+                    <td>E-mail*</td>
+                    <td><input type="email" name="M_email"></td>
+                </tr>
+                <tr>
+                    <td>전화번호</td>
+                    <td><input type="tel" name="M_tel2"></td>
+                </tr>
+                <tr>
+                    <td>휴대폰번호*</td>
+                    <td><input type="tel" name="M_tel" maxlength="11"></td>
+                </tr>
+                <tr>
+                    <td>주소*</td>
+                    <td>
+                        <input type="text" name="M_post" class="postcodify_postcode5" readonly>&nbsp;<input type="button" id="add_search"  value="주소 검색">
+                        <input type="text" name="M_road" class="postcodify_address" placeholder="기본주소" readonly>
+                        <input type="text" name="M_addr" placeholder="상세주소">
+                        <input type="text" placeholder="참고항목">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </article>
+    <article>
+        <div class="add_title"><i class="fas fa-cog"></i> 기타 개인설정</div>
+        <table>
+            <tbody>
+                <tr>
+                    <td>메일링서비스</td>
+                    <td><label><input type="checkbox" name="M_agree1" value="Y">
+                        정보 메일을 받겠습니다.</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>SMS 수신여부</td>
+                    <td><label><input type="checkbox" name="M_agree2" value="Y">
+                        휴대폰 문자메세지를 받겠습니다.</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>정보공개</td>
+                    <td><label><input type="checkbox" name="M_open" value="Y">
+                        다른분들이 나의 정보를 볼 수 있도록 합니다.</label><br>
+                        <span>정보공개를 바꾸시면 앞으로 0일 이내에는 변경이 안됩니다.</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>자동등록방지*</td>
+                    <td>
+                        <span class="scode"><img src="./code.php" alt="" id="codes"></span>
+                        <i class="fas fa-sync-alt" value='reload' id="refresh_btn" onclick="refresh_btn()"></i>
+                        <input type="text" id="security" name="M_security" maxlength="6">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>자동등록방지 숫자를 순서대로 입력하세요.</td>
+                </tr>
+            </tbody>
+        </table>
+    </article>
+    <div class="join_btn">
+        <input type="button" value="회원가입" onclick="join()">
+    </div>
+</section>
+</form>
+
+<script>
+    let $re = 0;
+    function refresh_btn(){
+        $re++;
+        document.getElementById("codes").setAttribute("src","./code.php?v="+$re);
+    }
+</script>

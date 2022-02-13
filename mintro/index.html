@@ -1,0 +1,43 @@
+<?php
+    $date = date("YmdHis");
+?>
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-compatible" content="IE=Edge, chrome=1">
+        <meta http-equiv="content-language" content="ko">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Movie intro-이벤트 페이지</title>
+        <link type="text/css" rel="stylesheet" href="./index.css?v=<?php echo $date?>">
+    </head>
+    <body>
+        <section class="mv_page">
+            <label class="logo">
+                <img src="./logo.png">
+            </label>
+            <span class="text">
+                <ul>
+                <li>검은사막 <span class="color1">캐릭터 사전 생성 이벤트</span></li>
+                <li>추첨을 통해 <span class="color1">총 100분에게 캐릭터 굿즈</span>를 증정합니다.</li>
+                <li>기간 <span class="color2">2021.07.01 ~ 07.31까지</span></li>
+                </ul>
+            </span>
+            <div class="info">
+                <dl class="info_dl">
+                    <dt>이벤트 참여 정보 입력</dt>
+                    <dd><input type="text" class="info_w" placeholder="생성할 캐릭터명을 입력하세요!"></dd>
+                    <dd><input type="text" class="info_w" placeholder="아이디 및 이메일 주소를 입력하세요!"></dd>
+                    <dd><input type="text" class="info_w" placeholder="접속할 대표 서버명을 입력하세요!"></dd>
+                </dl>
+                <label class="btn">
+                <input type="submit" value="LOGIN">
+                </label>
+            </div>
+            <video class="mp" muted autoplay loop> 
+                <source src="./web_intro.mp4" type="video/mp4">
+
+            </video>
+        </section>
+    </body>
+</html>

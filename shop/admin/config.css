@@ -1,0 +1,120 @@
+/* 환경설정 */
+.config_aticle {
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+}
+.config_aticle_title {
+    font-size: 140%;
+    font-weight: 500;
+    height: 60px;
+    display: table-cell;
+    vertical-align: middle;
+}
+.config_aticle_memo {
+    display: block;
+    height: 25px;
+    font-size: 80%;
+    text-align: left;
+}
+/* form */
+.config_aticle_table {
+    width: 100%;
+    height: auto;
+}
+.config_aticle_table_tr > th {
+    width: 15%;
+    text-align: left;
+    border-top: 1px solid #ccc;
+    border-left: 1px solid white;
+}
+.config_aticle_table_tr > td {
+    height: 50px;
+    border-right: 1px solid white;
+    border-top: 1px solid #ccc;
+    text-align: left;
+}
+.bottom_line {
+    border-bottom: 1px solid #ccc;
+}
+.config_input {
+    width: 250px;
+    height: 30px;
+    border: 1px solid #ccc;
+    text-indent: 5px;
+}
+.config_input:hover {
+    border: 1px solid #7f859c;
+}
+.config_post_number {
+    width: 70px;
+}
+.config_admin > td {
+    height: 50px;
+}
+.config_admin_input {
+    width: 250px;
+    height: 30px;
+    border: 1px solid #ccc;
+    text-indent: 5px;
+}
+.config_admin_input:hover {
+    border: 1px solid #7f859c;
+}
+.config_memo {
+    display: block;
+    font-size: 80%;
+    color: #7f859c;
+}
+.config_admin_second_title {
+    font-weight: 500;
+    height: 60px;
+    display: table-cell;
+    vertical-align:bottom;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+}
+.config_btnwrap {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+}
+.config_setting_btn {
+    width: 100px;
+    height: 35px;
+    border-radius: 3px;
+    border: none;
+    background-color: #7f859c;
+    color: white;
+    margin-top: 20px;
+}
+
+
+.ico_box {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ccc;
+}
+
+/* 파비콘 컨트롤 */
+.fimg_on {
+    display: none; 
+}
+.fimg {
+    width: 40px; 
+    height: 40px; 
+    border: 1px solid #ccc;
+    float: left;
+    margin-right: 10px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.fdel {
+    display: table-cell;
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+}

@@ -1,0 +1,40 @@
+@charset "UTF-8";
+@import "./index.scss";
+.event_wrapper {
+    @include object(100%,auto);
+    background-color: #f6f7fb;
+    padding: 47.5px 0;
+}
+.event_box {
+    @include object(1174px,415px);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    & > span{
+        display: block;
+        cursor: pointer;
+    }
+    & > span:nth-of-type(2) {
+        @include object(534px,415px);
+        overflow: hidden;
+        & > ul {
+            position: relative;
+            @include object(200%,415px);
+            & > li {
+                position: relative;
+                @include object(50%,415px);
+                float: left;
+                cursor: pointer;
+            }
+        }
+    }
+    & > ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        & > li{
+            @include object(auto,202px);
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,217 @@
+<article>
+    <form name="order" id="order" method="POST" enctype="application/x-www-form-urlencoded">
+        <input type="hidden" name="goodsno" id="goodsno" value=""> <!--필수-->
+        <input type="hidden" name="product_img" id="product_img" value=""> <!--필수-->
+        <input type="hidden" name="version" value="1.0" >
+        <input type="hidden" name="mid" value="">
+        <input type="hidden" name="goodname" id="goodname" id="goodname" value=""> <!--필수-->
+        <input type="hidden" name="oid" value="">
+        <input type="hidden" name="money" id="money" value="">
+        <input type="hidden" name="price" id="price" value=""> <!--필수-->
+        <input type="hidden" name="goodea" id="goodea" value="1"> <!--필수-->
+        <input type="hidden" name="currency" value="WON">
+        <input type="hidden" name="buyername" value="">
+        <input type="hidden" name="mkey" value="">
+        <input type="hidden" name="gopaymethod" value="">
+        <input type="hidden" name="offerPeriod" value="">
+        <input type="hidden" name="payViewType" value="overlay">
+        <input type="hidden" name="charset" value="UTF-8">
+
+        <div class="prdv_wrap">
+
+            <div id="prd_view" class="prd_view">
+                <span>
+                    <span>
+                    <img src="" alt="" id="main_img">
+                    </span>
+                    <ul id="sub_img">
+                        
+                    </ul>
+                </span>
+                <span>
+                    <ul>
+                        <li id="goodno"></li>
+                        <li><label id="productnm"></label><label><img src="./ico/ico_share.webp" alt=""></label></li>
+                        <li id="productnm_dtc"></li>
+                        <li id="saleview">회원할인가</li>
+                        <li><s id="product_money"></s></li>
+                        <li id="product_sales">원</li>
+                        <li>배송비 2,500원</li>
+                        <li id="option_area">
+                            <span>옵션선택</span>
+                            <select name="product_option" id="goods_op" class="goodsel1">
+                                <option value="">옵션을 선택해주세요</option>
+                            </select>
+                        </li>
+                        <li>
+                            <span>
+                                구매갯수
+                            </span>
+                            <input type="button" value="-" id="minus_btn">
+                            <input type="text" name='goods_buy' id="goods_ea" maxlength="2" class="goodsel2" value="1">
+                            <input type="button" value="+" id="plus_btn">
+                        </li>
+                        <li><span>
+                            총 상품금액
+                            </span>
+                            <label id="total_money">
+                                
+                            </label>
+                        </li>
+                        <li>
+                            <button type="button" id="go_payment"">구매하기</button>
+                            <button type="button" id="go_basket">장바구니</button>
+                        </li>
+                    </ul>
+                </span>
+            </div>
+
+
+
+            <aside class="goods_view_wrap">
+                <div class="goods_view_sticky">
+                    <ul id="goods_description">
+                        <li>상품상세정보</li>
+                        <li>배송/교환/환불</li>
+                        <li>상품후기</li>
+                        <li>상품문의</li>
+                    </ul>
+                </div>
+                <div class="contents_image" id="contents_image">
+
+                </div>
+                <div id="delivery_part" class="delivery_part">
+                    <table>
+                        <tr>
+                            <td>배송안내</td>
+                            <td>
+                                <ul>
+                                    <li>
+                                        주문하신 상품은 입금 확인 후 CJ택배로 발송되며 평균적으로 2~3일 이내에 배송됩니다.
+                                    </li>
+                                    <li>
+                                        배송비는 3만원 이상 구매시 무료배송이며, 3만원 미만 배송비 3,000원이 추가됩니다. (실 결제금액 기준)<br>
+                                        (단, vip,vip특별회원 등급의 회원은 모든 상품이 무료배송 입니다.)
+                                    </li>
+                                    <li>
+                                        도서산간 지역은 평균배송일보다 1~2일 더 소요될 수 있으며, 추가 배송비가 발생합니다.
+                                    </li>
+                                    <li>
+                                        무통장입금시 주문자명과 입금자명이 다를경우 확인이 어려우니 반드시 입금자명을 알려주세요.
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>교환/반품/환불안내</td>
+                            <td>
+                                <ul>
+                                    <li>
+                                        명품한우사랑 쇼핑몰은 공정거래위원회 규정에 의거하여 운영됩니다.
+                                    </li>
+                                    <li>
+                                        고객변심 및 주문착오에 의한 교환/반품은 7일이내에 전화 또는 게시판에 교환 및 반품을 요청해주세요<br>
+                                        단순변심에 의한 교환/반품 배송비는 고객님이 부담(왕복배송비 6,000원) 해 주셔야 합니다.
+                                    </li>
+                                    <li>
+                                        오배송, 상품불량일 경우 전액(해당제품) 환불/교환해 드립니다. (제품 수령일로부터 3개월 이내)
+                                    </li>
+                                    <li>
+                                        환불 진행은 반품하신 상품의 입고 확인 후 처리되며, 3일 이내에 현금환불 또는 카드 승인취소가 진행됩니다.
+                                    </li>
+                                    <li>
+                                        카드승인 취소기간은 (4-5일)정도가 소요되며, 카드사에 따라 기간이 달라 질 수 있으니 개별적으로 카드사에 문의해주시기 바랍니다.
+                                    </li>
+                                    <li>
+                                        교환/반품이 불가능한 경우<br>
+                                        제품 또는 사은품을 개봉하여 상품이 훼손되거나 분실 된 경우<br>
+                                        교환/반품 기간이 지난 상품 (상품 수령일로부터 최대 3개월)<br>
+                                        기타 사용자의 과실이 인정되는 경우
+                                    </li>
+                                    <li>
+                                        교환/반품 관련 배송비<br>
+                                        고객 변심에 의한 교환 및 반품 시 발생되는 배송비는 고객님 부담입니다.<br>
+                                        교환 시: 반송비 + 재배송비 = 6,000원<br>
+                                        반품 시: 초기배송비(무료배송포함) + 반송비 = 6,000원
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>반품주소지</td>
+                            <td>
+                                <ul>
+                                    <li>
+                                    반드시 고객센터에 전화 신청 후 반품하여 주시고, 택배사는 CJ택배로 보내주세요!
+                                    </li>
+                                    <li>
+                                    서울 종로3가 국일빌딩 5F (주)명품한우사랑 고객센터 1234-5678
+                                    </li>
+                                    <li>
+                                    MON-FRI 10:00 ~ 17:00 / LUNCH 12:00 ~ 13:00
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="product_review" class="product_review">
+                    <p>Product review</p>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>번호</td>
+                                <td>제목</td>
+                                <td>작성자</td>
+                                <td>작성일</td>
+                                <td>조회</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>두툼하고 맛있어요~~!!</td>
+                                <td>김*영</td>
+                                <td>2021-08-11</td>
+                                <td>1445</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="product_qa" class="product_qa">
+                    <p>Product Q&A</p>
+                    <ul>
+                        <li>
+                            상품에 대한 문의를 남기는 공간입니다. 해당 게시판의 성격과 다른 글은 사전동의 없이 담당 게시판으로 이동될 수 있습니다.
+                        </li>
+                        <li>
+                            배송관련, 주문(취소/교환/환불)관련 문의 및 요청사항은 <b>1:1문의</b>에 남겨주세요
+                        </li>
+                    </ul>
+                    <table>
+                        <tbody>
+                            <tr>
+                               <td>제목</td>
+                               <td>작성자</td>
+                               <td>작성일</td>
+                               <td>답변상태</td>
+                            </tr>
+                            <tr>
+                               <td>비밀글입니다.</td>
+                               <td>김*영</td>
+                               <td>2021-08-11</td>
+                               <td>답변완료</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+
+
+            </aside>
+
+
+        </div>
+    </form>
+    
+</article>

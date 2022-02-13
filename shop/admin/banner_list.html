@@ -1,0 +1,75 @@
+<meta charset="UTF-8">
+<article class="info_box">
+    <span class="info_title">배너리스트</span>
+    <ul class="tsbox">
+      <li onclick="fontclass('1')"><img src="../image/ts01.gif" alt="../image/ts01.gif" title="보통"></li>
+      <li onclick="fontclass('2')"><img src="../image/ts02.gif" alt="../image/ts02.gif" title="크게"></li>
+      <li onclick="fontclass('3')"><img src="../image/ts03.gif" alt="../image/ts03.gif" title="더 크게"></li>
+    </ul>
+</article>
+<!-- 제작 -->
+<article class="banner_part">
+<div class="banner_listNo">
+    <label>
+      <span>전체 목록 | 생성된 게시판 개수 <span>{{total_ea}}</span></span>
+    </label>
+</div>
+<!-- ajax GET으로 file보내기! effect banner_effect.php -->
+<div class="banner_top">
+<ul>
+    <li>메인배너 효과 :</li>
+    <li><label><input type="radio" name="effect" value="R"> 롤링배너</label></li>
+    <li><label><input type="radio" name="effect" value="F"> 페이드배너</label></li>
+    <li><input type="button" value="효과적용" onclick="banner_effect()"></li>
+</ul>
+</div>
+{{getajax}}
+<!-- TABLE -->
+<table class="banner_table">
+    <thead>
+        <tr>
+            <td>번호</td>
+            <td>이미지</td>
+            <td>링크 주소</td>
+            <td>배너명</td>
+            <td>배너순서</td>
+            <td>등록일자</td>
+            <td>삭제</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr v-for="data,n in banners">
+            <td>{{data.idx}}</td>
+            <td><img :src="data.img" @click="popup_img(data.img)"></td>
+            <td><input type="text" name="linkurls[]" v-bind:value="data.link" ></td>
+            <td>{{data.nm}}</td>
+            <td>
+                <select>
+                    <option v-for="i in 10">{{i}}</option>
+                </select>
+            </td>
+            <td>{{data.date}}</td>
+            <!-- banner_del.php GET 키값 del_idx로  -->
+            <td class="banner_del">
+                <a href="" @click="del_banner(data.bidx)">삭제</a>
+            </td>
+        </tr>
+    </tbody>
+    <tfoot v-if="tablenone">
+        <tr>
+          <td colspan="7">등록된 배너가 없습니다.</td>
+        </tr>
+    </tfoot>
+</table>
+
+
+<div class="product_page">
+    <ul>
+      <li v-for="i in pagearr" @click="page_number(i)">{{i}}</li>
+    </ul>
+</div>
+
+<div class="banner_foot">
+    <input type="button" value="배너등록" onclick="banner_input()">
+</div>
+</article>

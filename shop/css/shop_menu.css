@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  font-family: 'Noto Sans KR', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.menu_wrapper {
+  width: 100%;
+  height: auto;
+}
+
+.m1 {
+  background-color: #303947;
+  position: relative;
+  width: 100%;
+  height: 50px;
+}
+
+.menu_list {
+  position: relative;
+  padding: 0 10px;
+  width: 1174px;
+  height: 50px;
+  margin: 0 auto;
+  font-size: 15px;
+}
+
+.menu_list > ul > li {
+  width: 140px;
+  height: 50px;
+  line-height: 50px;
+  padding-left: 17px;
+  color: white;
+  float: left;
+  cursor: pointer;
+}
+
+.menu_list > ul > li:hover {
+  background-color: white;
+  color: #be0000;
+  font-weight: bold;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.menu_list > label {
+  display: block;
+  width: 140px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background-color: #c3222b;
+  color: white;
+  float: right;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.menu_list > label:hover {
+  background-color: white;
+  color: #be0000;
+  font-weight: bold;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.drop_menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  height: 260px;
+  margin: 0 auto;
+  background-color: #fff;
+  z-index: 50;
+}
+
+.drop_menu > span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1174px;
+  height: auto;
+  margin: 0 auto;
+  padding: 10px 0 0 10px;
+}
+
+.drop_menu > span > ul {
+  width: 140px;
+  height: auto;
+  border-right: 1px solid #eee;
+  padding-left: 20px;
+}
+
+.drop_menu > span > ul > li {
+  font-size: 12px;
+  width: auto;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  text-align: left;
+  cursor: pointer;
+}
+
+.drop_menu > span > ul > li:hover {
+  font-weight: bold;
+  color: #be0000;
+}
+
+.drop_menu > span > ul:last-of-type {
+  border: none;
+}
+/*# sourceMappingURL=shop_menu.css.map */

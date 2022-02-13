@@ -1,0 +1,424 @@
+@charset "UTF-8";
+@import "./index.scss";
+
+b {
+    color: $font_color_red;
+}
+
+.buy_wrap {
+    @include object(1020px,auto);
+    margin: 0 auto;
+    & > p {
+        text-indent: 5px;
+        font-size: 18px;
+    }
+    & > h2 {
+        margin: 0;
+        padding: 79px 0 35px 0;
+        text-align: center;
+        font-size: 30px;
+        padding-bottom: 30px;
+    }
+
+}
+.buy_table {
+    @include object(100%,auto);
+    text-align: center;
+    border: none;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    border-top: 2px solid rgb(100,100,100);
+    border-collapse: collapse;
+    & > thead {
+        height: 35px;
+        & > tr {
+            & > td{
+                border-bottom: 1px solid $border_color;
+                &:first-of-type{
+                    @include object(400px, auto);
+                }
+                &:nth-of-type(2){
+                    @include object(50px, auto);
+                }
+                &:last-of-type{
+                    @include object(150px, auto);
+                }
+            }
+            
+        }
+    }
+    & > tbody {
+        font-size: 15px;
+        color: $font_color_black0;
+        & > tr {
+            position: relative;
+            height: 100px;
+            cursor: pointer;
+            border-bottom: 1px solid $border_color;
+            & > td {
+                &:first-of-type {
+                    padding: 10px 25px;
+                    display: flex;
+                    justify-content: space-between;
+                    & > span {
+                        display: block;
+                        @include object(80px,80px);
+                        
+                        &:last-of-type {
+                            @include object(70%,80px);
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            & > p {
+                                text-align: left;
+                                margin: 0;
+                                &:first-of-type {
+                                font-weight: 400;
+                                font-size: 16px;
+                                }
+                                &:last-of-type {
+                                    font-size: 14px;
+                                    color: #aaa;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.buy_section {
+    @include object(100%,auto);
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0 80px 0;
+
+    & > .buy_aside_left {
+        @include object(60%,auto);
+        & > span {
+            font-size: 18px;
+            display: flex;
+            text-indent: 5px;
+            @include object(100%,50px);
+            line-height: 50px;
+            font-weight: 400;
+            justify-content: space-between;
+            align-items: flex-end;
+            & > label {
+                font-size: $font_size_small;
+                color: $font_color_red;
+                line-height: 30px;
+            }
+        }
+
+    }
+
+    & > .buy_aside_right {
+        position: relative;
+        @include object(35%,1357px);
+
+        & > .total_wrap {
+            position: sticky;
+            top: 200px;
+            @include object(100%,auto);
+            padding:17px 16px 18px 18px;
+            border: 1px solid $border_color;
+            border-radius: 3px;
+            background-color: #fafafa;
+            font-weight: 400;
+            & > h4 {
+                font-size: 19px;
+                border-bottom: 1px solid $border_color;
+                margin: 0;
+                padding: 10px 0;
+                font-weight: 400;
+            }
+            & > div {
+                
+                & > dl {
+                    display: flex;
+                    justify-content: space-between;
+                    &:last-of-type {
+                        & > dd {
+                            font-size: 18px;
+                            color: $font_color_red;
+                            font-weight: bold;
+                        }
+                    }
+                }
+                & > div {
+                    padding: 10px 0;
+                }
+                & > .pay_agree {
+                    & > label {
+                        & > input {
+                            display: none;
+                            &:checked + label {
+                                background-color: #303947;
+                                color: white;
+                                border: 1px solid #303947;
+                            }
+                        }
+                        & > label {
+                            display: inline-block;
+                            @include object(20px, 20px);
+                            border: 1px solid #ccc;
+                            border-radius: 3px;
+                            line-height: 18px;
+                            font-size: 13px;
+                            padding: 0 1px 0 3px;
+                            margin-right: 5px;
+                            cursor: pointer;
+                        }    
+                            
+                            & > span {
+                                font-size: 15px;
+                            }
+                        
+                        
+                    }
+                }
+                & > .pay_button {
+                    & > button {
+                        position: relative;
+                        overflow:hidden;
+                        border-radius: 2px;
+                        z-index: 1;
+                        @include object(100%,50px);
+                        background-color: #303947;
+                        border: none;
+                        font-size: 18px;
+                        font-weight: 200;
+                        color: white;
+                        transition:         0.08s ease-in;
+                        -o-transition:      0.08s ease-in;
+                        -ms-transition:     0.08s ease-in;
+                        -moz-transition:    0.08s ease-in;
+                        -webkit-transition: 0.08s ease-in;
+                        &:hover {
+                            transition: 0.3s all ease;
+                            background-color: $font_color_red;
+                            color: white;
+                        }
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            background: $font_color_red;
+                            bottom: 0;
+                            left: 0;
+                            right: 0;
+                            top: 100%;
+                            z-index: -1;
+                            transition: top 0.09s ease-in;
+                        }
+                        &:hover::before {
+                            top: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+
+
+
+.buy_table2 {
+    @include object(100%,auto);
+    text-align: center;
+    border: none;
+    margin-bottom: 10px;
+    border-top: 2px solid rgb(100,100,100);
+    border-collapse: collapse;
+    & input:focus {outline:none;}
+    & input[type="text"] {
+        border: none;
+        @include object(90%,50px);
+        border-bottom: 1px solid #aaa;  
+        border-radius: 0 0 2px 2px;
+        text-indent: 5px;
+
+        &:focus {
+            transition: 0.1s all ease;
+            border-bottom: 2px solid $font_color_red;
+        }
+    }
+    & input[type="email"] {
+        border: none;
+        @include object(90%,50px);
+        border-bottom: 1px solid #aaa;  
+        border-radius: 0 0 2px 2px;
+        text-indent: 5px;
+
+        &:focus {
+            transition: 0.1s all ease;
+            border-bottom: 2px solid $font_color_red;
+        }
+    }
+    & select {
+        border: none;
+        @include object(30%,50px);
+        border-bottom: 1px solid #aaa;  
+        border-radius: 0 0 2px 2px;
+        text-indent: 5px;
+        &:focus {
+            transition: 0.1s all ease;
+            border-bottom: 2px solid $font_color_red;
+        }
+    }
+    & > tbody {
+        font-size: 15px;
+        color: $font_color_black0;
+        & > tr {
+            position: relative;
+            height: 70px;
+            text-align: left;
+            & > td {
+                &:first-of-type {
+                    text-indent: 10px;
+                    @include object(150px,auto);
+                    color: $font_color_black0;
+                    font-weight: 400;
+                }
+                & .small {
+                    @include object(30%,50px);
+                }
+            }
+        }
+    }
+}
+.buy_table3 {
+    @include object(100%,auto);
+    text-align: center;
+    border: none;
+    margin-bottom: 10px;
+    border-top: 2px solid rgb(100,100,100);
+    border-collapse: collapse;
+
+    & input:focus {outline:none;}
+    & input[type="text"] , input[type="tel"] {
+        border: none;
+        @include object(90%,50px);
+        border-bottom: 1px solid #aaa;  
+        border-radius: 0 0 2px 2px;
+        text-indent: 5px;
+        &:focus {
+            transition: 0.1s all ease;
+            border-bottom: 2px solid $font_color_red;
+        }
+    }
+
+
+    & > tbody {
+        font-size: 15px;
+        color: $font_color_black0;
+        & > tr {
+            position: relative;
+            height: 70px;
+            text-align: left;
+            
+            & .small {
+                @include object(30%,50px);
+            }
+            & > td:first-of-type {
+                text-indent: 10px;
+            }
+            & > td:last-of-type {
+                & button {
+                    border: none;
+                    @include object(20%,49px);
+                    background-color: $border_color;  
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+            }
+            &:first-of-type {
+                
+                & > td {
+                    &:first-of-type {
+                        @include object(150px,auto);
+                        
+                    }
+                    &:last-of-type {
+                        height: 120px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+                        color: $font_color_black0;
+                        font-weight: 400;
+                        text-indent: 0;
+                        
+                        
+                        & > label {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+
+
+.buy_table4 {
+    @include object(100%,auto);
+    border: none;
+    margin-bottom: 10px;
+    border-top: 2px solid rgb(100,100,100);
+    border-collapse: collapse;
+    & input:focus {outline:none;}
+    & input[type="text"] {
+        border: none;
+        @include object(50%,50px);
+        border-bottom: 1px solid #aaa;  
+        border-radius: 0 0 2px 2px;
+        text-indent: 5px;
+        &:focus {
+            transition: 0.1s all ease;
+            border-bottom: 2px solid $font_color_red;
+        }
+    }
+
+
+    & select {
+        border: none;
+        @include object(30%,50px);
+        border-bottom: 1px solid #aaa;  
+        border-radius: 0 0 2px 2px;
+        text-indent: 5px;
+        &:focus {
+            transition: 0.1s all ease;
+            border-bottom: 2px solid $font_color_red;
+        }
+    }
+
+    & span {
+        display: inline-block;
+        @include object(150px,auto);
+    }
+
+    .pay_option_view {
+        display: none;
+    }
+    & > thead , & > tbody , & > tfoot {
+        font-size: 15px;
+        color: $font_color_black0;
+        & > tr {
+            position: relative;
+            height: 70px;
+            text-align: left;
+            & > td{
+                &:first-of-type {
+                    text-indent: 10px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,76 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.wrapper {
+  padding: 0 15px;
+}
+
+h2 {
+  margin: 15px 0;
+  text-align: center;
+  text-shadow: 1px 1px 1px #fff;
+}
+
+p {
+  margin: 10px 0 5px 0;
+  font-weight: bold;
+}
+
+.txt1 {
+  width: 100%;
+  height: 100px;
+  border: 1px solid #ccc;
+  overflow-y: scroll;
+  padding: 5px;
+  color: #787878;
+}
+
+.barea {
+  width: 100%;
+  height: 30px;
+  display: inline-block;
+  margin-top: 5px;
+  text-align: right;
+}
+
+.btnbox {
+  display: inline-block;
+  width: 70px;
+  height: 30px;
+  background-color: #464646;
+  border-radius: 30px;
+  position: relative;
+  padding: 2px;
+}
+
+.btnbox > .btn {
+  position: absolute;
+  right: 2px;
+  display: inline-block;
+  background-color: white;
+  width: 25px;
+  height: 25px;
+  border-radius: 25px;
+  -webkit-box-shadow: inset 1px 1px 5px #ccc, inset -5px -5px 10px #fff;
+          box-shadow: inset 1px 1px 5px #ccc, inset -5px -5px 10px #fff;
+}
+
+.agreebox {
+  text-align: center;
+}
+
+.agree_btn {
+  width: 100px;
+  height: 35px;
+  border: none;
+  background-color: #464646;
+  color: white;
+  border-radius: 5px;
+}
+
+.agree_btn:active {
+  background-color: #a4fbd0;
+}
+/*# sourceMappingURL=m_agree.css.map */

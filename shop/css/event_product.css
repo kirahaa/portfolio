@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  font-family: 'Noto Sans KR', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.event_wrapper {
+  width: 100%;
+  height: auto;
+  background-color: #f6f7fb;
+  padding: 47.5px 0;
+}
+
+.event_box {
+  width: 1174px;
+  height: 415px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.event_box > span {
+  display: block;
+  cursor: pointer;
+}
+
+.event_box > span:nth-of-type(2) {
+  width: 534px;
+  height: 415px;
+  overflow: hidden;
+}
+
+.event_box > span:nth-of-type(2) > ul {
+  position: relative;
+  width: 200%;
+  height: 415px;
+}
+
+.event_box > span:nth-of-type(2) > ul > li {
+  position: relative;
+  width: 50%;
+  height: 415px;
+  float: left;
+  cursor: pointer;
+}
+
+.event_box > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.event_box > ul > li {
+  width: auto;
+  height: 202px;
+  cursor: pointer;
+}
+/*# sourceMappingURL=event_product.css.map */

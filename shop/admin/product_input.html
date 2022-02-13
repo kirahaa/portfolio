@@ -1,0 +1,93 @@
+<meta charset="UTF-8">
+<div id="pd">
+{{product_view}}
+{{product_view2}}
+{{product_view3}}
+<article class="info_box">
+    <span class="info_title">상품 관리 리스트</span>
+    <ul class="tsbox">
+      <li onclick="fontclass('1')"><img src="../image/ts01.gif" alt="../image/ts01.gif" title="보통"></li>
+      <li onclick="fontclass('2')"><img src="../image/ts02.gif" alt="../image/ts02.gif" title="크게"></li>
+      <li onclick="fontclass('3')"><img src="../image/ts03.gif" alt="../image/ts03.gif" title="더 크게"></li>
+    </ul>
+</article>
+<article>
+    <div class="product__wrapper">
+        <label>
+          <span>신규 상품 등록</span>
+        </label>
+      </div>
+
+      <form name="pd_frm" id="pd_frm" method="POST" action="new_productok.php" enctype="multipart/form-data">
+        <input type="hidden" name="domain" value="http://khy4018.dothome.co.kr"> <!-- 이도메인 외에 등록한 도메인을 차단하기 위해 -->
+        <input type="hidden" name="product_key" value="new_product"> <!-- 보안상! -->
+      <table class="newpd_table">
+        <tbody>
+          <tr>
+              <td>상품코드*</td>
+              <td> <input type="text" name="goodsno" v-model="pdcode" readonly> <span class="comment">* 해당 상품 코드는 8자리 자동 생성됩니다.</span> </td>
+          </tr>
+          <tr>
+            <td>상품명*</td>
+            <td> <input type="text" name="product_nm" v-model="product_nm" maxlength="150"> <span class="comment">* 상품명은 150자까지 등록이 가능합니다.</span> </td>
+          </tr>
+          <tr>
+            <td>간편설명*</td>
+            <td> <input type="text" name="product_nmdtc" v-model="product_nmdtc" class="longinput" maxlength="200"> <span class="comment">* 최대 200자 이내</span> </td>
+          </tr>
+          <tr>
+            <td>소비자 가격*</td>
+            <td> <input type="text" name="product_money" v-model="product_money" class="txtalign"> 원</td>
+          </tr>
+          <tr>
+            <td>상품 할인 유/무*</td>
+            <td><label for="" class="racss"> <input type="radio" name="product_dc" v-model="product_dc" value="Y" @click="m_check(1)"> 적용 </label> 
+                <label for="" class="racss"> <input type="radio" name="product_dc" v-model="product_dc" value="N" @click="m_check(2)" checked> 미적용 </label></td>
+          </tr>
+          <tr v-if="discount">
+            <td>상품 할인율*</td>
+            <td> 
+                <label for="" class="racss"> <input type="radio" name="product_dcpart" v-model="product_dcpart" value="P"> %단위 </label>
+                <label for="" class="racss"> <input type="radio" name="product_dcpart" v-model="product_dcpart" value="M"> 원단위 </label> 
+                <input type="text" name="product_dcnum" v-model="product_dcnum" class="txtalign"> 할인율(할인금액) | 할인 최종금액 : 
+                <input type="text" name="product_sales" v-model="product_sales" readonly class="txtalign"> 원
+            </td>
+          </tr>
+          <tr>
+            <td>상품 제한수량*</td>
+            <td> <input type="text" name="product_ea" v-model="product_ea"> EA &nbsp; <span class="comment">*최대 수량은 99999개 입니다.</span></td>
+          </tr>
+          <tr>
+            <td>상품 대표 이미지*</td>
+            <td> <input type="file" name="product_img" v-model="product_img" accept="image/*"> <span class="comment"> ※ JPG,BMP,PNG,JPEG,GIF 2MB 이하만 업로드 가능합니다. (500 * 500)</span></td>
+          </tr>
+          <tr>
+            <td>상품 옵션명</td>
+            <td>옵션 1 : <input type="text" name="product_option1" v-model="product_option1"> 
+                옵션 2 : <input type="text" name="product_option2" v-model="product_option2"> 
+                옵션 3 : <input type="text" name="product_option3" v-model="product_option3"> <span class="comment">* 미 입력시 옵션은 출력되지 않음</span></td>
+          </tr>
+          <tr>
+            <td>상품 상세보기 URL</td>
+            <td> <input type="text" name="product_url" class="longinput"></td>
+          </tr>
+          <tr>
+            <td>상품 추가 이미지</td>
+            <td class="filetd">
+                <div><span class="comment"> ※ JPG,BMP,PNG,JPEG,GIF 2MB 이하만 업로드 가능합니다. (500 * 500)</span></div>
+                <div><input type="file" name="product_img1" v-model="product_img1"> </div>
+                <div><input type="file" name="product_img2" v-model="product_img2"> </div>
+                <div><input type="file" name="product_img3" v-model="product_img3"> </div>
+            </td>
+          </tr>
+          <tr>
+            <td>상품 상세설명*</td>
+            <td><textarea class="text_area" name="product_contents1" v-model="product_contents1"></textarea></td>
+          </tr>
+        </tbody>
+    </table>
+    </form>
+    <div class="newproduct_foot"><input type="button" value="상품목록" @click="go_productlist"> <input type="button" value="상품등록" @click="post_newpd"></div>
+<!-- new_productok_test.php 테스트 전송 파일 -->
+</article>
+</div>

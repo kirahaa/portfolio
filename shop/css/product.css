@@ -1,0 +1,397 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  font-family: 'Noto Sans KR', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.prdv_wrap {
+  width: 1050px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.prd_view {
+  width: 100%;
+  height: auto;
+  padding: 50px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.prd_view > span:first-of-type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 430px;
+  height: auto;
+}
+
+.prd_view > span:first-of-type > span {
+  display: block;
+  width: 430px;
+  height: 430px;
+  overflow: hidden;
+}
+
+.prd_view > span:first-of-type > ul {
+  padding-top: 20px;
+  width: 100%;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.prd_view > span:first-of-type > ul > li {
+  width: 100px;
+  height: 100px;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.prd_view > span:last-of-type {
+  display: block;
+  width: 490px;
+  height: auto;
+}
+
+.prd_view > span:last-of-type > ul > li {
+  line-height: 55px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.prd_view > span:last-of-type > ul > li:first-of-type {
+  line-height: 15px;
+  font-weight: 200;
+  color: #444;
+  font-size: 14px;
+}
+
+.prd_view > span:last-of-type > ul > li:nth-of-type(2) {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.prd_view > span:last-of-type > ul > li:nth-of-type(3) {
+  line-height: 20px;
+  font-weight: 300;
+  color: #444;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #eee;
+}
+
+.prd_view > span:last-of-type > ul > li:nth-of-type(5) {
+  line-height: 15px;
+  color: #aaa;
+}
+
+.prd_view > span:last-of-type > ul > li:nth-of-type(6) {
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.prd_view > span:last-of-type > ul > li:nth-of-type(7) {
+  line-height: 15px;
+  color: #aaa;
+  font-size: 12px;
+  font-weight: 400;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #eee;
+}
+
+.prd_view > span:last-of-type > ul > li:nth-of-type(8), .prd_view > span:last-of-type > ul > li:nth-of-type(9) {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.prd_view > span:last-of-type > ul > li:nth-of-type(8) > input[type="button"], .prd_view > span:last-of-type > ul > li:nth-of-type(9) > input[type="button"] {
+  width: 25px;
+  height: 30px;
+  border: 1px solid #ccc;
+  background-color: transparent;
+  font-size: 17px;
+}
+
+.prd_view > span:last-of-type > ul > li:nth-of-type(8) > input[type="button"]:first-of-type, .prd_view > span:last-of-type > ul > li:nth-of-type(9) > input[type="button"]:first-of-type {
+  border-right: 0;
+  border-radius: 2px 0 0 2px;
+}
+
+.prd_view > span:last-of-type > ul > li:nth-of-type(8) > input[type="button"]:last-of-type, .prd_view > span:last-of-type > ul > li:nth-of-type(9) > input[type="button"]:last-of-type {
+  border-left: 0;
+  border-radius: 0 2px 2px 0;
+}
+
+.prd_view > span:last-of-type > ul > li > span {
+  font-size: 15px;
+  font-weight: 400;
+  margin-right: 40px;
+}
+
+.prd_view > span:last-of-type > ul > li > select {
+  width: 80%;
+  height: 30px;
+  border: 1px solid #ccc;
+  text-indent: 5px;
+  border-radius: 2px;
+}
+
+.prd_view > span:last-of-type > ul > li .goodsel2 {
+  border: none;
+  font-size: 15px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 0;
+}
+
+.prd_view > span:last-of-type > ul > li:nth-of-type(10) {
+  font-size: 25px;
+  font-weight: 400;
+  border-bottom: 1px solid #eee;
+}
+
+.prd_view > span:last-of-type > ul > li:last-of-type {
+  padding-top: 38px;
+}
+
+.prd_view > span:last-of-type > ul > li > label > img {
+  width: 40px;
+  height: auto;
+}
+
+.prd_view > span:last-of-type > ul > li > button {
+  width: 49%;
+  height: 55px;
+  border: none;
+  background-color: #303947;
+  color: white;
+  font-size: 18px;
+  font-weight: 200;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.prd_view > span:last-of-type > ul > li > button:hover {
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  background-color: white;
+  border: 2px solid #303947;
+  color: black;
+  font-weight: bold;
+}
+
+.prd_view > span:last-of-type > ul > li > button:first-of-type {
+  background-color: #be0000;
+}
+
+.prd_view > span:last-of-type > ul > li > button:first-of-type:hover {
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  background-color: white;
+  border: 2px solid #be0000;
+  color: black;
+  font-weight: bold;
+}
+
+.goods_view_wrap {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.goods_view_wrap > .goods_view_sticky {
+  width: 100%;
+  height: 60px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.goods_view_wrap > .goods_view_sticky > ul {
+  width: 100%;
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.goods_view_wrap > .goods_view_sticky > ul > li {
+  width: 25%;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  border: 1px solid #eee;
+  border-left: none;
+  background-color: #fafafa;
+  color: #6a6969;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.goods_view_wrap > .goods_view_sticky > ul > li:first-of-type {
+  border-left: 1px solid #eee;
+  background-color: white;
+  color: #be0000;
+  border-bottom: none;
+}
+
+.goods_view_wrap .contents_image {
+  padding-top: 60px;
+}
+
+.goods_view_wrap .contents_image > p img {
+  width: 100%;
+}
+
+.goods_view_wrap .delivery_part {
+  width: 100%;
+  height: auto;
+  padding-top: 60px;
+}
+
+.goods_view_wrap .delivery_part > table {
+  width: 100%;
+  height: auto;
+  border: none;
+  border-collapse: collapse;
+  border-top: 2px solid #000000;
+  font-size: 14px;
+}
+
+.goods_view_wrap .delivery_part > table tr > td {
+  border-bottom: 1px solid #ccc;
+}
+
+.goods_view_wrap .delivery_part > table tr > td:first-of-type {
+  text-align: center;
+  background-color: #eee;
+}
+
+.goods_view_wrap .delivery_part > table tr > td:last-of-type {
+  padding: 10px 0 10px 40px;
+}
+
+.goods_view_wrap .delivery_part > table tr > td:last-of-type > ul {
+  list-style: disc;
+}
+
+.goods_view_wrap .delivery_part > table tr > td:last-of-type > ul > li {
+  line-height: 30px;
+}
+
+.goods_view_wrap .product_review {
+  padding-top: 60px;
+}
+
+.goods_view_wrap .product_review > table {
+  width: 100%;
+  height: auto;
+  border: none;
+  border-collapse: collapse;
+  border-top: 2px solid #000000;
+  font-size: 14px;
+  text-align: center;
+}
+
+.goods_view_wrap .product_review > table > tbody > tr {
+  height: 40px;
+  color: #6a6969;
+}
+
+.goods_view_wrap .product_review > table > tbody > tr:first-of-type {
+  border-bottom: 1px solid #eee;
+  color: black;
+}
+
+.goods_view_wrap .product_review > table > tbody > tr > td:first-of-type {
+  width: 15%;
+}
+
+.goods_view_wrap .product_review > table > tbody > tr > td:nth-of-type(2) {
+  width: 50%;
+}
+
+.goods_view_wrap .product_qa {
+  padding: 60px 0;
+}
+
+.goods_view_wrap .product_qa > ul {
+  padding-left: 35px;
+  font-size: 14px;
+  color: #6a6969;
+}
+
+.goods_view_wrap .product_qa > ul > li {
+  list-style: disc;
+  line-height: 35px;
+}
+
+.goods_view_wrap .product_qa > table {
+  margin-top: 20px;
+  width: 100%;
+  height: auto;
+  border: none;
+  border-collapse: collapse;
+  border-top: 2px solid #000000;
+  font-size: 14px;
+  text-align: center;
+}
+
+.goods_view_wrap .product_qa > table > tbody > tr {
+  color: #6a6969;
+  height: 40px;
+}
+
+.goods_view_wrap .product_qa > table > tbody > tr:first-of-type {
+  border-bottom: 1px solid #eee;
+  color: black;
+}
+
+.goods_view_wrap .product_qa > table > tbody > tr > td:first-of-type {
+  width: 60%;
+}
+/*# sourceMappingURL=product.css.map */

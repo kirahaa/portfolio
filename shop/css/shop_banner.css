@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  font-family: 'Noto Sans KR', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.mb {
+  height: auto;
+  position: relative;
+}
+
+.effect1 {
+  display: none;
+  margin: 0 auto;
+  width: 100%;
+  height: 534px;
+  position: relative;
+  zoom: 1;
+}
+
+.effect1 > .main_banner {
+  width: 100%;
+  height: inherit;
+  position: relative;
+  overflow: hidden;
+}
+
+.effect1 > .main_banner > .banners {
+  min-width: 1174px;
+  height: inherit;
+  position: relative;
+  overflow: hidden;
+}
+
+.effect1 > .main_banner > .banners > li {
+  display: none;
+  width: 100%;
+  position: absolute;
+  height: auto;
+}
+
+.effect1 > .main_banner > .banners > li > img {
+  width: 100%;
+  min-height: 534px;
+  vertical-align: top;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.effect1 > .main_banner > .banners > li:nth-of-type(1) {
+  display: block;
+}
+
+.effect1 > .main_banner > .btn_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  height: 57px;
+  top: 50%;
+  margin-top: -28.5px;
+  z-index: 10;
+}
+
+.effect1 > .main_banner > .btn_wrap > .leftbtn {
+  display: block;
+  width: 30px;
+  height: 57px;
+  background-image: url("../banner/arrow.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-position: 0;
+  position: absolute;
+  left: 10%;
+}
+
+.effect1 > .main_banner > .btn_wrap > .rightbtn {
+  display: block;
+  width: 30px;
+  height: 57px;
+  background-image: url("../banner/arrow.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-position: -30px;
+  position: absolute;
+  right: 10%;
+}
+
+.effect1 > .main_banner > .banner_disc {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  position: relative;
+  bottom: 35px;
+}
+
+.effect1 > .main_banner > .banner_disc > li {
+  display: inline-block;
+  margin: 0 3px;
+  width: 100px;
+  height: 7px;
+  border-radius: 2px;
+  background-color: black;
+  cursor: pointer;
+}
+
+.effect1 > .main_banner > .banner_disc > li:hover {
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+}
+
+.effect1 > .main_banner > .banner_disc > li:first-of-type {
+  background-color: #be0000;
+}
+
+.effect2 {
+  display: none;
+  width: 100%;
+  height: 534px;
+  position: relative;
+}
+
+.effect2 > .main_banner {
+  width: 100%;
+  height: inherit;
+  position: relative;
+  overflow: hidden;
+}
+
+.effect2 > .main_banner > .banners {
+  min-width: 1174px;
+  height: inherit;
+  position: relative;
+}
+
+.effect2 > .main_banner > .banners > li {
+  width: 100%;
+  position: relative;
+  height: auto;
+}
+
+.effect2 > .main_banner > .banners > li > img {
+  width: 100%;
+  min-height: 534px;
+  vertical-align: top;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.effect2 > .main_banner > .banner_disc {
+  width: 1174px;
+  height: auto;
+  position: relative;
+  margin: 0 auto;
+  top: -500px;
+  left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.effect2 > .main_banner > .banner_disc > li {
+  width: 20px;
+  height: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.effect2 > .main_banner > .banner_disc > li:first-of-type {
+  background-color: #c3222b;
+}
+/*# sourceMappingURL=shop_banner.css.map */

@@ -1,0 +1,40 @@
+<meta charset="UTF-8">
+
+<article class="info_box">
+    <span class="info_title">신규 배너등록</span>
+    <ul class="tsbox">
+      <li onclick="fontclass('1')"><img src="../image/ts01.gif" alt="../image/ts01.gif" title="보통"></li>
+      <li onclick="fontclass('2')"><img src="../image/ts02.gif" alt="../image/ts02.gif" title="크게"></li>
+      <li onclick="fontclass('3')"><img src="../image/ts03.gif" alt="../image/ts03.gif" title="더 크게"></li>
+    </ul>
+</article>
+<article class="banner_part">
+
+    <div class="banner_listNo">
+        <label>
+          <span>배너 등록</span>
+        </label>
+    </div>
+    
+    <form name="frm" id="frm" ref="frm" v-bind:method="mtd" v-bind:action="php" v-bind:enctype="enc" >
+    <input type="hidden" v-bind:name="hv" v-model="urls">
+    <table class="bannernew_table">
+        <tbody>
+        <tr>
+            <td>배너명</td>
+            <td><input type="text" v-bind:name="nm" v-model="bnm"></td>
+        </tr>
+        <tr>
+            <td>링크주소</td>
+            <td><input type="text" v-bind:name="lk" v-model="blk"></td>
+        </tr>
+        <tr>
+            <td>배너이미지</td>
+            <td><input type="file" v-bind:name="img" v-model="bimg" v-bind:accept="file"><span style="color: red;"> * 업로드 배너 용량은 3MB 이하입니다.</span></td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="bannernew_foot"> <input type="button" value="목록" @click="banner_list"><input type="button" value="배너등록" @click="banner_post"></div>
+    </form>
+</article>
+<!-- vue로 검토하여 데이터를 POST로 전송 -->

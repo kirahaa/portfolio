@@ -1,0 +1,132 @@
+<meta charset="UTF-8">
+<article class="info_box">
+    <span class="info_title">관리자 메인</span>
+    <ul class="tsbox">
+        <li onclick="fontclass('1')"><img src="../image/ts01.gif" alt="../image/ts01.gif" title="보통"></li>
+        <li onclick="fontclass('2')"><img src="../image/ts02.gif" alt="../image/ts02.gif" title="크게"></li>
+        <li onclick="fontclass('3')"><img src="../image/ts03.gif" alt="../image/ts03.gif" title="더 크게"></li>
+    </ul>
+</article>
+<!-- new member table -->
+<aside>
+    <div class="info_list1">신규 가입 회원 <label id="new_member"></label>건 총 회원수: <label id="total_member"></label>명</div>
+    <div class="info_list2"></div>
+    <table class="tablecss">
+        <thead>
+        <tr class="trcss">
+            <td>번호</td>
+            <td>회원아이디</td>
+            <td>이름</td>
+            <td>닉네임</td>
+            <td>권한</td>
+            <td>포인트</td>
+            <td>그룹</td>
+        </tr>
+        </thead>
+        <tbody id="memlist">
+        <!-- <tr class="trcss2" id="trid"> -->
+            <!-- <td id="user_id">hong</td>
+            <td id="user_name">홍길동</td>
+            <td id="user_nick">길동</td>
+            <td id="user_level">2</td>
+            <td id="user_point">1000</td>
+            <td id="user_group">실버그룹</td> -->
+        <!-- </tr> -->
+        </tbody>
+        <tbody>
+        <tr class="none">
+            <td colspan="6">등록된 회원이 없습니다.</td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="tbottom">
+        <span><input type="button" value="회원 전체보기" id="go_memlist"></span>
+    </div>
+</aside>
+<!-- Q & A 신규 질문 목록 -->
+<aside>
+    <div class="info_list1">Q & A 신규 질문 <label id="new_faq"></label>건</div>
+    <!-- <div class="info_list2">질문 대기 <label></label>건수, 완료<label></label>건수</div> -->
+    <table class="QAtable">
+        <thead>
+            <tr class="qatr">
+                <td>번호</td>
+                <td>카테고리</td>
+                <td>질문사항</td>
+                <td>작성자</td>
+                <td>질문일자</td>
+            </tr>
+        </thead>
+        <tbody id="qalist">
+            <!-- <tr class="qatr2">
+                <td>hong</td>
+                <td>신용카드 결제 취소는 어떻게 해야 하나요??</td>
+                <td></td>
+                <td>2021-06-08</td>
+                <td>-</td>
+                <td>N</td>
+            </tr> -->
+        </tbody>
+        <tbody>
+            <tr class="none">
+                <td colspan="6">문의 내역이 없습니다.</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="tbottom">
+        <span><input type="button" value="Q&A 전체보기" id="go_qalist"></span>
+    </div>
+</aside>
+<!-- 포인트 발급 내역 -->
+<!-- <aside>
+    <div class="info_list1">최근 포인트 발생내역</div>
+    <div class="info_list2">전체 <label></label>건</div>
+    <table class="point_table">
+        <thead>
+            <tr class="point_tr">
+                <td>아이디</td>
+                <td>이름</td>
+                <td>닉네임</td>
+                <td>일시</td>
+                <td>포인트 내용</td>
+                <td>포인트</td>
+                <td>포인트 합계</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="point_tr2">
+                <td>hong</td>
+                <td>홍길동</td>
+                <td>길동</td>
+                <td>2021-06-08</td>
+                <td>첫 가입고객 포인트 제공</td>
+                <td>100</td>
+                <td>52,000</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr class="none">
+                <td colspan="7">발생한 포인트 내역이 없습니다.</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="tbottom">
+        <span><input type="button" value="포인트 전체보기"></span>
+    </div>
+</aside> -->
+
+
+
+
+
+
+
+<!-- <script>
+    function abc(){
+        let a = document.getElementById("trid").children;
+        let b = Number(a[4].innerText);
+        console.log(b.toLocaleString("ko"));
+        document.getElementById("num").toLocaleString();
+    }
+    abc();
+</script> -->

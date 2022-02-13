@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap : http://khy4018.dothome.co.kr/portfolio/shop/sitemap.xml

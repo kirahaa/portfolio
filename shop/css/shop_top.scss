@@ -1,0 +1,195 @@
+@charset "UTF-8";
+@import "./index.scss";
+
+.top_wrapper {
+    @include object(100%,auto);
+}
+.t1 {
+    background-color: #fee63c;
+}
+.t2 {
+    border-bottom: 1px solid $border_color;
+}
+.top_banner {
+    @include object(1174px,80px);
+    @include back_img("../banner/top_event_banner.jpg");
+    margin: 0 auto;
+}
+.top_nav {
+    @include object(1174px,40px);
+    margin: 0 auto;
+    font-size: $font_size_small;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    & > ul {
+        @include object(auto,40px);
+        & > li {
+            @include lobject(auto,40px);
+            float: left;
+            padding: 0 10px;
+            cursor: pointer;
+        }
+    }
+    & > .nav_part1 {
+        color: $font_color_black;
+        & > li {
+            &:hover {
+                background-color: $border_color;
+                transition: all 0.5s ease;
+            }
+            & > a {
+                color: $font_color1;
+            }
+        }
+        & > li:nth-of-type(1) {
+            border-left: 1px solid $border_color;
+            border-right: 1px solid $border_color;
+            & > .nav_hbgr {
+                padding: 5px 5px 0 0;
+            }
+        }
+        & > li:nth-of-type(2) {
+            border-right: 1px solid $border_color;
+        }
+    }
+    & > .nav_part2 {
+        & > li {
+            @include lobject("",40px);
+            color: $font_color1;
+            position: relative;
+            &::after {
+                content: "|";
+                position: absolute;
+                right: 0;
+            }
+            &:last-of-type::after {
+                content: "";
+            }
+            &:last-of-type::before {
+                content: "|";
+                position: absolute;
+                left: 0;
+            }
+            
+            & > a {
+                color: $font_color1;
+                &:hover {
+                    color: $font_color_black2;
+                    transition: all 0.5s ease;
+                }
+            }
+            & > span {
+                color: $font_color_red;
+            }
+            & > .nav_point {
+                position: absolute;
+                left: 0;
+                top: 100%;
+                @include lobject(70px,20px);
+                background-color: $font_color_black2;
+                color:white;
+                border-radius: 20px;
+                animation: float 0.8s linear infinite alternate;
+                & > img {
+                    position: absolute;
+                    bottom: 100%;
+                    left: 20px;
+                }
+            }
+            & > i {
+                width: 10px;
+                height: 10px;
+                position: relative;
+            }
+            & > i::before {
+                position: absolute;
+                height: 5px;
+                top: -3px;
+            }
+
+            &:hover {
+                color: $font_color_black2;
+                transition: all 0.5s ease;
+            }
+        }
+        & > .customer_center {
+            &::after {
+                content: "";
+            }
+        }
+    }
+}
+.top_main {
+    margin: 0 auto;
+    padding: 0 35px 0 10px;
+    @include object(1174px,140px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    & > span {
+        display: block;
+        @include object(auto,72px);
+        cursor: pointer;
+        & > img {
+            height: 72px;
+        }
+        &:nth-of-type(3){
+            @include object(auto,72px);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            & > .nav_search {
+                display: block;
+                @include object(235px,35px);
+                & > input[type='text'] {
+                    @include object(200px,35px);
+                    border:1px solid $font_color2;
+                    float: left;
+                    border-radius: 20px 0 0 20px;
+                    text-indent: 10px;
+                    outline: none;
+                }
+                & > input[type='submit'] {
+                    float: left;
+                    display: block;
+                    @include object(35px,35px);
+                    background-color:$font_color_black;
+                    border-radius: 0 20px 20px 0;
+                    @include back_img("../image/btn_top_search.png");
+                    cursor: pointer;
+                }
+            }
+            & > .nav_info {
+                color : $font_color1;
+                margin-top: 5px;
+                display: flex;
+                justify-content: space-between;
+                @include object(235px,18px);
+                font-size: $font_size_small;
+                overflow: hidden;
+                color: $font_color_black0;
+                & > ul {
+                    position: relative;
+                    
+                    & > li {
+                        @include object(130px,18px);
+                        cursor: pointer;
+                    }
+                }
+                & > label {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+}
+@keyframes float {
+    from {
+        top:33px;
+    }
+    to {
+        top:38px;
+    }
+}

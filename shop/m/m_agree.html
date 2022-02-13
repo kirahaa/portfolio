@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./m_agree.css">
+    <title>membership page</title>
+</head>
+<body>
+    <section>
+        <div class="wrapper">
+            <h2>MEMBERSHIP</h2>
+            <p>이용약관</p>
+            <div class="txt1"></div>
+            <div class="barea">
+            <span id="btnbox1" class="btnbox"><label name="ck1" id="btn1" class="btn"></label></span>
+            </div>
+            <p>이메일 수신 약관</p>
+            <div class="txt1"></div>
+            <div class="barea">
+            <span id="btnbox2" class="btnbox"><label name="ck2" id="btn2" class="btn"></label></span>
+            </div>
+            <p>개인정보처리방침</p>
+            <div class="txt1"></div>
+            <div class="barea">
+            <span id="btnbox3" class="btnbox"><label name="ck3" id="btn3" class="btn"></label></span>
+            </div>
+            <div class="agreebox">
+            <input type="button" value="동의완료" id="agree_btn" class="agree_btn">
+            </div>
+        </div>
+    </section>
+</body>
+<script type="module">
+    import { go_join } from "./m_agree.js";
+</script>
+</html>

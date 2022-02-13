@@ -1,0 +1,245 @@
+@charset "UTF-8";
+@import "./index.scss";
+
+.week_title {
+    @include object(1200px,auto);
+    margin: 50px auto;
+    & > img {
+        margin: 0 auto;
+        display: block;
+    }
+}
+.week_wrap {
+    @include object(1200px,auto);
+    margin-top: 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    & > ul {
+        background-color: #fbfbfb;
+        @include object(305px,auto);
+        margin-bottom: 30px;
+        border-radius: 4px;
+        padding: 15px 0;
+        cursor: pointer;
+        box-shadow: 3px 3px 5px #eee;
+        &:hover {
+            // transition: 0.1s ease all;
+            transform: scale(1.01);
+            box-shadow: 3px 3px 15px #eee;
+        }
+        & > li {
+            text-align: center;
+            &:first-of-type {
+                @include object(inherit,180px);
+                position: relative;
+                display: flex;
+                justify-content: center;
+                & > label {
+                    display: block;
+                    @include object(180px,180px);
+                    position: relative;
+                    border-radius: 10px;
+                    @include back_img("");
+                }
+                & > img {
+                    margin: 0 auto;
+                    @include object(180px,auto);
+                    position: relative;
+                    display: block;
+                    border-radius: 10px;
+                    // &:hover {
+                    //     transition: 0.3s ease all;
+                    //     transform: scale(1.02);
+                    // }
+                }
+
+                & > span {
+                    display: none;
+                    // display: flex;
+                    @include object(180px,35px);
+                    position: absolute;
+                    bottom: 0;
+                    left: 62.5px;
+                    border-radius: 0 0 10px 10px;
+                    background-color: rgba(0,0,0,0.5);
+                    & > label {
+                        display: flex;
+                        @include object(50%,inherit);
+                        justify-content: center;
+                        &:first-of-type{
+                            border-radius: 0 0 0 10px;
+                        }
+                        &:last-of-type{
+                            border-radius: 0 0 10px 0;
+                        }
+                        &:hover {
+                            background-color: rgba($font_color_red,0.8);
+                        }
+                        & > ul {
+                            @include object(50%,inherit);
+                            & > li {
+                                @include object(100%, 35px);
+                                color: white;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                font-size: $font-size-small;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+
+                }
+            }
+            &:nth-of-type(2) {
+                @include object(inherit,40px);
+                line-height: 40px;
+                font-weight: bold;
+            }
+            &:nth-of-type(3) {
+                @include object(inherit,22px);
+                font-size: 13px;
+                color: $font_color_black0;
+                font-weight: 300;
+            }
+            &:nth-of-type(4) {
+                @include object(inherit,20px);
+                line-height: 20px;
+                font-size: $font_size_small;
+                font-weight: 300;
+                & > s { 
+                    color: $font_color1;
+                }
+            }
+            &:nth-of-type(5) {
+                @include object(inherit,25px);
+                line-height: 25px;
+                font-weight: bold;
+                font-size: $font_size_medium;
+                color: $font_color_red;
+            }
+        }
+    }
+}
+
+.event_ban {
+    @include object(100%,325px);
+    @include back_img("../event_banner/event_banner.jpg");
+
+}
+
+/* notice_part */ 
+
+.notice_wrap {
+    @include object(1200px,auto);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+    & > span {
+        display: block;
+        @include object(370px,181px);
+        border: 1px solid #ccc;
+        padding: 10px;
+        overflow: hidden;
+        
+        &:last-of-type{
+            padding: 0;
+            border: none;
+        }
+        & > label {
+            display: block;
+            font-weight: bold;
+            padding: 0 0 10px 10px;
+        }
+        & > ul {
+            padding-left: 30px;
+            list-style: disc;
+            font-size: $font_size_medium;
+            & > li {
+                height: 25px;
+                cursor: pointer;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+/* footer part */
+
+.foot_back {
+    background-color: #f6f7fb;
+    position: relative;
+}
+.pagetop {
+    display: block;
+    @include object(57px,57px);
+    @include back_img("../image/btn_pagetop.webp");
+    position: absolute;
+    right: 35px;
+    bottom: 35px;
+}
+.foot_wrap {
+    @include object(1200px, auto);
+    margin: 0 auto;
+    padding-bottom: 30px;
+    background-color: #f6f7fb;
+}
+.foot_menu {
+    @include object(100%, 70px);
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+
+    & > ul {
+        display: flex;
+        & > li {
+            cursor: pointer;
+            color: $font_color_black0;
+            font-size: $font_size_medium;
+            padding:10px;
+            position: relative;
+            &:after {
+                position: absolute;
+                content: "|";
+                right: 0;
+            }
+            &:last-of-type {
+                &:after {
+                    content: "";
+                }
+            }
+            &:hover{
+                color: $font_color_black2;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+.foot_copyright {
+    @include object(100%,auto);
+    & > ul {
+        display: flex;
+        justify-content: center;
+        color: $font_color_black0;
+        font-size: $font_size_medium;
+        font-weight: 300;
+        & > li {
+            padding: 5px;
+        }
+    }
+}
+.admin_btn {
+    border: 1px solid $font_color1;
+    background-color: transparent;
+    border-radius: 5px;
+    color: $font_color_black0;
+    cursor: pointer;
+    &:hover {
+        border: 1px solid $font_color_black0;
+    }
+}

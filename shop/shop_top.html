@@ -1,0 +1,49 @@
+<div class="top_wrapper">
+    <div class="t1">
+        <div class="top_banner" title="무료배송 쿠폰"></div>
+    </div>
+    <div class="t2">
+        <div class="top_nav">
+            <ul class="nav_part1">
+                <li title="즐겨찾기"><span class="nav_hbgr"><img src="./image/book_icon.png" alt=""></span>즐겨찾기</li>
+                <li title="고객센터">고객센터 <a href="tel:02-0123-4567">02-0123-4567</a></li>
+            </ul>
+            <ul class="nav_part2">
+                <li title="로그인" id="login_off"><a href="./shop_login.html">로그인</a></li>
+                <li id="login_on3"><span id="member_id"></span> 님 환영합니다</li>
+                <li title="회원가입" id="login_on2"><a href="member_ship.html">회원가입</a>
+                    <span id="nav_point" class="nav_point"><img src="./image/joinpoin_bg.png" alt="">2,000 P</span>
+                </li>
+                <li title="마이페이지">마이페이지<i class="fas fa-sort-down"></i></li>
+                <li title="장바구니">장바구니(<span> 0 </span>)</li>
+                <li title="고객센터" class="customer_center">고객센터</li>
+                <li title="로그아웃" id="login_on" style="display: none;"><a href="#" id="logout">로그아웃</a></li>
+            </ul>
+        </div>
+        
+    </div>
+    <div class="t3"> 
+        <form name="search_frm" id="search_frm" method="GET" action="./search.html" enctype="application/x-www-form-urlencoded">
+            <div class="top_main">
+                <span title="구매 사은품 증정"><img src="./image/gift_banner.jpg" alt=""></span>
+                <span title="한우사랑"><a href="./index.html"><img src="./ico/logo.png" alt="한우사랑 로고"></a></span>
+                <span>
+                    <span class="nav_search">
+                        <input type="text" id="search_input" name="searchwd" placeholder="검색어를 입력하세요">
+                        <input type="submit" value=""></label>
+                    </span>
+                    <span class="nav_info">
+                        <span>[공지사항]</span>
+                        <ul id="notice_banner">
+                            <!-- admin_notice.json get -->
+                        </ul>
+                        <label>
+                            <img src="./image/btn_top_notice_prev.png" alt="" id="notice_upBtn">
+                            <img src="./image/btn_top_notice_next.png" alt="" id="notice_downBtn">
+                        </label>
+                    </span>
+                </span>
+            </div>
+        </form>
+    </div>
+</div>

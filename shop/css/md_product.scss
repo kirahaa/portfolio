@@ -1,0 +1,107 @@
+@charset "UTF-8";
+@import "./index.scss";
+
+
+.md_Wrap {
+    @include object(1200px,auto);
+    margin: 0 auto;
+    position: relative;
+}
+.md_title {
+    display: block;
+    @include object(inherit,auto);
+    text-align: center;
+    margin: 50px 0;
+}
+.md_btn1 {
+    display: block;
+    @include object(40px,40px);
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    left: -30px;
+    opacity: 0.5;
+    cursor: pointer;
+    &:hover {
+        opacity: 1;
+        transform: scale(1.1);
+        transition: all 1s ease;
+    }
+}
+.md_btn2 {
+    display: block;
+    @include object(40px,40px);
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    right: -30px;
+    opacity: 0.5;
+    cursor: pointer;
+    &:hover {
+        opacity: 1;
+        transform: scale(1.1);
+        transition: all 0.5s ease;
+    }
+}
+
+.md_prd {
+    @include object(inherit,auto);
+    position: relative;
+    overflow: hidden;
+    
+    & > span {
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 30px;
+        position: relative;
+        
+
+        & > ul {
+
+            @include object(204px,auto);
+            margin-right: 30px;
+            margin-bottom: 20px;
+            & > li {
+                @include lobject(204px,20px);
+                font-weight: bold;
+                &:first-of-type {
+                    @include object(204px,204px);
+                    
+                    & > label {
+                        display: block;
+                        @include object(202px,202px);
+                        margin: 0 auto;
+                        border-radius: 202px;
+                        overflow: hidden;
+                        position: relative;
+                        & > img {
+                            display: block;
+                            cursor: pointer;
+                            margin: 0 auto;
+                            position: relative;
+                            top: -30px;
+                            &:hover {
+                                transition: 0.3s all ease-in-out;
+                                transform: scale(1.05);
+                            }
+                        }
+                    }
+                }
+                &:nth-of-type(2){
+                    @include lobject(202px,50px);
+                    font-size: $font_size_large;
+                }
+                &:nth-of-type(3){
+                    color: $font_color_black0;
+                    font-size: $font_size_small;
+                }
+                &:nth-of-type(4){
+                    color: $font_color_red;
+                    font-size: $font_size_medium;
+                }
+            }
+        }
+          
+    }
+}
+
